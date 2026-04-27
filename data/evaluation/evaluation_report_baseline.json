@@ -1,0 +1,856 @@
+{
+  "metadata": {
+    "evaluated_at": "2026-04-10T01:44:18.307922",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "top_k": 5,
+    "min_score_threshold": 0.45,
+    "test_set_version": "1.0"
+  },
+  "overall": {
+    "total_questions": 30,
+    "in_scope_questions": 24,
+    "out_of_scope_questions": 6,
+    "avg_recall@1": 0.625,
+    "avg_recall@3": 0.667,
+    "avg_recall@5": 0.792,
+    "avg_mean_recall@5": 0.604,
+    "avg_mrr": 0.675,
+    "avg_precision@5": 0.196,
+    "out_of_scope_accuracy": 1.0
+  },
+  "by_category": {
+    "symptoms": {
+      "n": 4,
+      "recall@1": 0.5,
+      "recall@3": 0.75,
+      "recall@5": 1.0,
+      "mrr": 0.675
+    },
+    "diagnosis": {
+      "n": 4,
+      "recall@1": 0.5,
+      "recall@3": 0.5,
+      "recall@5": 0.75,
+      "mrr": 0.562
+    },
+    "treatment": {
+      "n": 5,
+      "recall@1": 0.6,
+      "recall@3": 0.6,
+      "recall@5": 0.8,
+      "mrr": 0.65
+    },
+    "prevention": {
+      "n": 4,
+      "recall@1": 0.5,
+      "recall@3": 0.5,
+      "recall@5": 0.5,
+      "mrr": 0.5
+    },
+    "lifestyle": {
+      "n": 4,
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mrr": 1.0
+    },
+    "causes": {
+      "n": 3,
+      "recall@1": 0.667,
+      "recall@3": 0.667,
+      "recall@5": 0.667,
+      "mrr": 0.667
+    }
+  },
+  "by_query_type": {
+    "direct": {
+      "n": 14,
+      "recall@1": 0.786,
+      "recall@3": 0.786,
+      "recall@5": 0.857,
+      "mrr": 0.804
+    },
+    "colloquial": {
+      "n": 6,
+      "recall@1": 0.667,
+      "recall@3": 0.667,
+      "recall@5": 0.833,
+      "mrr": 0.7
+    },
+    "follow_up": {
+      "n": 4,
+      "recall@1": 0.0,
+      "recall@3": 0.25,
+      "recall@5": 0.5,
+      "mrr": 0.188
+    }
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "question": "What are the symptoms of chronic kidney disease?",
+      "category": "symptoms",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011",
+        "nhs-kidney-disease-symptoms-of-ckd-002"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p1",
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1",
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011",
+        "nhs-kidney-disease-symptoms-of-ckd-002"
+      ],
+      "retrieved_scores": [
+        0.7117952108383179,
+        0.7076833248138428,
+        0.6946407556533813,
+        0.6848918199539185,
+        0.662546694278717
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.6
+    },
+    {
+      "id": "q02",
+      "question": "What symptoms appear in the later stages of CKD?",
+      "category": "symptoms",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011",
+        "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-symptoms-of-ckd-002",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p1"
+      ],
+      "retrieved_scores": [
+        0.7640818953514099,
+        0.7326350212097168,
+        0.7224240899085999,
+        0.7029577493667603,
+        0.6204734444618225
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q03",
+      "question": "how would I even know if my kidneys are in trouble?",
+      "category": "symptoms",
+      "query_type": "colloquial",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+        "nhs-kidney-disease-symptoms-when-to-get-medical-advice-012"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-acute-kidney-injury-how-acute-kidney-injury-is-diagnosed-080",
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1",
+        "nhs-kidney-disease-diagnosis-who-should-be-tested-for-ckd-014",
+        "nhs-acute-kidney-injury-symptoms-of-acute-kidney-injury-079",
+        "nhs-kidney-disease-symptoms-when-to-get-medical-advice-012"
+      ],
+      "retrieved_scores": [
+        0.6582773923873901,
+        0.643654465675354,
+        0.629684567451477,
+        0.623508095741272,
+        0.6184069514274597
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.3333333333333333,
+      "mrr": 0.2,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q04",
+      "question": "what about the early stages?",
+      "category": "symptoms",
+      "query_type": "follow_up",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011",
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-symptoms-of-ckd-002",
+        "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p1"
+      ],
+      "retrieved_scores": [
+        0.7465481758117676,
+        0.7179263234138489,
+        0.7047157287597656,
+        0.697650671005249,
+        0.6465616226196289
+      ],
+      "recall@1": 0.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 0.5,
+      "precision@5": 0.4
+    },
+    {
+      "id": "q05",
+      "question": "How is chronic kidney disease diagnosed?",
+      "category": "diagnosis",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1",
+        "nhs-kidney-disease-diagnosis-blood-test-015",
+        "nhs-kidney-disease-diagnosis-urine-test-016"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p3",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p2",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p1",
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009"
+      ],
+      "retrieved_scores": [
+        0.7049831748008728,
+        0.6847013235092163,
+        0.6648902893066406,
+        0.6644651889801025,
+        0.6492470502853394
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q06",
+      "question": "What are the stages of CKD?",
+      "category": "diagnosis",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-test-results-and-stages-of-ckd-019"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011",
+        "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p2",
+        "nhs-kidney-disease-tests-for-ckd-004"
+      ],
+      "retrieved_scores": [
+        0.5979572534561157,
+        0.5976074934005737,
+        0.5599887371063232,
+        0.5283470153808594,
+        0.49968233704566956
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0,
+      "mean_recall@5": 0.0,
+      "mrr": 0.0,
+      "precision@5": 0.0
+    },
+    {
+      "id": "q07",
+      "question": "what test do they run for kidney problems?",
+      "category": "diagnosis",
+      "query_type": "colloquial",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-blood-test-015",
+        "nhs-kidney-disease-diagnosis-urine-test-016",
+        "nhs-kidney-disease-tests-for-ckd-004"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-blood-test-015",
+        "nhs-kidney-disease-diagnosis-other-tests-017",
+        "nhs-kidney-disease-diagnosis-who-should-be-tested-for-ckd-014",
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1",
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p2"
+      ],
+      "retrieved_scores": [
+        0.7218080759048462,
+        0.6811557412147522,
+        0.6610910296440125,
+        0.6473786234855652,
+        0.6227046251296997
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q08",
+      "question": "and the urine one?",
+      "category": "diagnosis",
+      "query_type": "follow_up",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-urine-test-016"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-blood-test-015",
+        "nhs-kidney-disease-tests-for-ckd-004",
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p2",
+        "nhs-kidney-disease-diagnosis-urine-test-016",
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1"
+      ],
+      "retrieved_scores": [
+        0.7332719564437866,
+        0.6982109546661377,
+        0.6959677934646606,
+        0.6508412957191467,
+        0.6256095170974731
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 0.25,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q09",
+      "question": "What are the treatments for chronic kidney disease?",
+      "category": "treatment",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-treatments-for-ckd-005"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p6",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p5",
+        "nhs-kidney-disease-treatment-lifestyle-changes-022",
+        "nhs-kidney-disease-treatment-kidney-transplant-035"
+      ],
+      "retrieved_scores": [
+        0.7463652491569519,
+        0.7253062129020691,
+        0.6602681279182434,
+        0.6573247909545898,
+        0.6497097611427307
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.5,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q10",
+      "question": "What is dialysis for kidney disease?",
+      "category": "treatment",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-dialysis-033"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p5",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p6",
+        "nhs-kidney-disease-treatment-kidney-transplant-035",
+        "nhs-kidney-disease-treatment-dialysis-033",
+        "nhs-kidney-disease-treatment-glomerulonephritis-031"
+      ],
+      "retrieved_scores": [
+        0.6792807579040527,
+        0.647136926651001,
+        0.6414704322814941,
+        0.6326059103012085,
+        0.5791814923286438
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 0.25,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q11",
+      "question": "What medicines are used to treat high blood pressure in CKD?",
+      "category": "treatment",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-high-blood-pressure-025",
+        "nhs-kidney-disease-treatment-medicine-023"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-treatment-high-blood-pressure-025",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p2",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p3",
+        "nhs-kidney-disease-prevention-manage-underlying-conditions-063",
+        "nhs-kidney-disease-treatment-high-blood-sugar-levels-024"
+      ],
+      "retrieved_scores": [
+        0.653061032295227,
+        0.5963200330734253,
+        0.5652524828910828,
+        0.5631225109100342,
+        0.532485842704773
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.5,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q12",
+      "question": "can CKD be cured?",
+      "category": "treatment",
+      "query_type": "colloquial",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-treatments-for-ckd-005"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-treatments-for-ckd-005",
+        "nhs-kidney-disease-treatment-medicine-023",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p2",
+        "nhs-kidney-disease-outlook-for-ckd-006",
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011"
+      ],
+      "retrieved_scores": [
+        0.7315031290054321,
+        0.7012977600097656,
+        0.6443830728530884,
+        0.6362178325653076,
+        0.6262508630752563
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.5,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q13",
+      "question": "tell me more about transplants",
+      "category": "treatment",
+      "query_type": "follow_up",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-kidney-transplant-035"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-treatments-for-ckd-005",
+        "nhs-kidney-disease-treatment-dialysis-033",
+        "nhs-kidney-disease-treatment-medicine-023",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p3"
+      ],
+      "retrieved_scores": [
+        0.6821996569633484,
+        0.6749090552330017,
+        0.634297251701355,
+        0.6163749098777771,
+        0.6147688627243042
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0,
+      "mean_recall@5": 0.0,
+      "mrr": 0.0,
+      "precision@5": 0.0
+    },
+    {
+      "id": "q14",
+      "question": "How can I prevent chronic kidney disease?",
+      "category": "prevention",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062-p1",
+        "nhs-kidney-disease-prevention-manage-underlying-conditions-063"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062-p1",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-treatment-lifestyle-changes-022",
+        "nhs-kidney-disease-living-with-chronic-kidney-disease-living-with-overv-039-p2",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p6"
+      ],
+      "retrieved_scores": [
+        0.7684279680252075,
+        0.7019725441932678,
+        0.6962863802909851,
+        0.6859477758407593,
+        0.6739723682403564
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.5,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q15",
+      "question": "Does smoking cause kidney problems?",
+      "category": "prevention",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-stop-smoking-064"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062-p1",
+        "nhs-kidney-disease-treatment-lifestyle-changes-022",
+        "nhs-kidney-disease-treatment-glomerulonephritis-031",
+        "nhs-kidney-disease-outlook-for-ckd-006",
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011"
+      ],
+      "retrieved_scores": [
+        0.6076385974884033,
+        0.5642676949501038,
+        0.550496518611908,
+        0.5215830206871033,
+        0.5173776149749756
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0,
+      "mean_recall@5": 0.0,
+      "mrr": 0.0,
+      "precision@5": 0.0
+    },
+    {
+      "id": "q16",
+      "question": "are painkillers bad for your kidneys?",
+      "category": "prevention",
+      "query_type": "colloquial",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-be-careful-with-painkillers-068"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-prevention-be-careful-with-painkillers-068",
+        "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062-p2",
+        "nhs-kidney-disease-living-with-take-your-medicine-040",
+        "nhs-kidney-disease-treatment-lifestyle-changes-022",
+        "nhs-kidney-disease-living-with-chronic-kidney-disease-living-with-overv-039-p1"
+      ],
+      "retrieved_scores": [
+        0.7664298415184021,
+        0.6190271377563477,
+        0.5737062692642212,
+        0.541991651058197,
+        0.5185466408729553
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q17",
+      "question": "what about diet and exercise?",
+      "category": "prevention",
+      "query_type": "follow_up",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-healthy-diet-065",
+        "nhs-kidney-disease-prevention-exercise-regularly-067"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-living-with-have-a-healthy-diet-041",
+        "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062-p1",
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-living-with-exercise-regularly-044",
+        "nhs-kidney-disease-prevention-manage-underlying-conditions-063"
+      ],
+      "retrieved_scores": [
+        0.6337810754776001,
+        0.6291914582252502,
+        0.623586893081665,
+        0.6176872849464417,
+        0.617339551448822
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0,
+      "mean_recall@5": 0.0,
+      "mrr": 0.0,
+      "precision@5": 0.0
+    },
+    {
+      "id": "q18",
+      "question": "Can I exercise if I have kidney disease?",
+      "category": "lifestyle",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-exercise-regularly-044"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-living-with-exercise-regularly-044",
+        "nhs-kidney-disease-living-with-chronic-kidney-disease-living-with-overv-039-p2",
+        "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062-p2",
+        "nhs-kidney-disease-prevention-exercise-regularly-067",
+        "nhs-kidney-disease-treatment-lifestyle-changes-022"
+      ],
+      "retrieved_scores": [
+        0.7789925336837769,
+        0.7582536935806274,
+        0.672883152961731,
+        0.647680401802063,
+        0.6246309280395508
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q19",
+      "question": "Can I drink alcohol with CKD?",
+      "category": "lifestyle",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-limit-your-alcohol-consumption-047"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-living-with-limit-your-alcohol-consumption-047",
+        "nhs-kidney-disease-treatment-lifestyle-changes-022"
+      ],
+      "retrieved_scores": [
+        0.5748923420906067,
+        0.48608025908470154
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.5
+    },
+    {
+      "id": "q20",
+      "question": "Is pregnancy safe for women with kidney disease?",
+      "category": "lifestyle",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-pregnancy-055"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-living-with-pregnancy-055",
+        "nhs-kidney-disease-living-with-chronic-kidney-disease-living-with-overv-039-p4",
+        "nhs-kidney-disease-living-with-get-vaccinated-048",
+        "nhs-kidney-disease-prevention-healthy-diet-065",
+        "nhs-acute-kidney-injury-how-to-lower-your-chances-of-acute-kidne-083"
+      ],
+      "retrieved_scores": [
+        0.7150793671607971,
+        0.6219677329063416,
+        0.49416619539260864,
+        0.49049630761146545,
+        0.4688275456428528
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q21",
+      "question": "can I still go to work if I have CKD?",
+      "category": "lifestyle",
+      "query_type": "colloquial",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-can-i-continue-working-057",
+        "nhs-kidney-disease-living-with-what-happens-if-i-can-no-longer-work-058"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-living-with-what-happens-if-i-can-no-longer-work-058",
+        "nhs-kidney-disease-living-with-chronic-kidney-disease-living-with-overv-039-p5",
+        "nhs-kidney-disease-prevention-manage-underlying-conditions-063",
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1",
+        "nhs-kidney-disease-living-with-get-support-051"
+      ],
+      "retrieved_scores": [
+        0.6643247008323669,
+        0.6280276775360107,
+        0.49111154675483704,
+        0.4823962152004242,
+        0.4821076989173889
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 0.5,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q22",
+      "question": "What causes chronic kidney disease?",
+      "category": "causes",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-causes-of-ckd-003"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-causes-of-ckd-003",
+        "nhs-kidney-disease-treatment-glomerulonephritis-031",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p1",
+        "nhs-kidney-disease-chronic-kidney-disease-overview-001-p3",
+        "nhs-kidney-disease-outlook-for-ckd-006"
+      ],
+      "retrieved_scores": [
+        0.7689050436019897,
+        0.7174241542816162,
+        0.7040101289749146,
+        0.6801891326904297,
+        0.6678229570388794
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q23",
+      "question": "What causes kidney stones?",
+      "category": "causes",
+      "query_type": "direct",
+      "expected_chunk_ids": [
+        "nhs-kidney-stones-what-causes-kidney-stones-073"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-stones-what-causes-kidney-stones-073",
+        "nhs-kidney-stones-kidney-stones-overview-070-p1",
+        "nhs-kidney-disease-causes-of-ckd-003",
+        "nhs-acute-kidney-injury-causes-of-acute-kidney-injury-078",
+        "nhs-kidney-disease-treatment-glomerulonephritis-031"
+      ],
+      "retrieved_scores": [
+        0.7452499866485596,
+        0.694007396697998,
+        0.6009944677352905,
+        0.5680471658706665,
+        0.554185152053833
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mean_recall@5": 1.0,
+      "mrr": 1.0,
+      "precision@5": 0.2
+    },
+    {
+      "id": "q24",
+      "question": "does diabetes mess up your kidneys?",
+      "category": "causes",
+      "query_type": "colloquial",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-causes-of-ckd-003",
+        "nhs-kidney-disease-prevention-manage-underlying-conditions-063"
+      ],
+      "retrieved_chunk_ids": [
+        "nhs-kidney-disease-treatment-glomerulonephritis-031",
+        "nhs-kidney-disease-prevention-healthy-diet-065",
+        "nhs-kidney-disease-living-with-chronic-kidney-disease-living-with-overv-039-p2",
+        "nhs-kidney-disease-treatment-lifestyle-changes-022",
+        "nhs-kidney-disease-outlook-for-ckd-006"
+      ],
+      "retrieved_scores": [
+        0.54763263463974,
+        0.5404676795005798,
+        0.5249452590942383,
+        0.518744707107544,
+        0.5002617239952087
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0,
+      "mean_recall@5": 0.0,
+      "mrr": 0.0,
+      "precision@5": 0.0
+    },
+    {
+      "id": "q25",
+      "question": "What is the best football team in England?",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "expected_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "retrieved_scores": [],
+      "out_of_scope_pass": true
+    },
+    {
+      "id": "q26",
+      "question": "How do I cook a lasagna?",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "expected_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "retrieved_scores": [],
+      "out_of_scope_pass": true
+    },
+    {
+      "id": "q27",
+      "question": "What's the weather like in London tomorrow?",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "expected_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "retrieved_scores": [],
+      "out_of_scope_pass": true
+    },
+    {
+      "id": "q28",
+      "question": "My car won't start, what should I do?",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "expected_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "retrieved_scores": [],
+      "out_of_scope_pass": true
+    },
+    {
+      "id": "q29",
+      "question": "What's the capital of Australia?",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "expected_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "retrieved_scores": [],
+      "out_of_scope_pass": true
+    },
+    {
+      "id": "q30",
+      "question": "Can you write me a poem about love?",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "expected_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "retrieved_scores": [],
+      "out_of_scope_pass": true
+    }
+  ]
+}

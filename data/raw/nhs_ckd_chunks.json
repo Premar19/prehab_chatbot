@@ -1,0 +1,684 @@
+{
+  "metadata": {
+    "scraped_at": "2026-04-04T20:24:46.601553",
+    "source": "NHS UK",
+    "topic": "Chronic Kidney Disease (CKD)",
+    "total_chunks": 84,
+    "total_words": 13377,
+    "urls_scraped": 13
+  },
+  "chunks": [
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Chronic kidney disease — Overview",
+      "content": "Chronic kidney disease (CKD) is a long-term condition where the kidneys do not work as well as they should.It's a common condition often associated with getting older. It can affect anyone, but it's more common in people who are black or of south Asian origin.CKD can get worse over time and eventually the kidneys may stop working altogether, but this is uncommon. Many people with CKD are able to live long lives with the condition. Symptoms of CKDThere are usually no symptoms of kidney disease in the early stages. It may only be diagnosed if you have a blood or urine test for another reason and the results show a possible problem with your kidneys.At a more advanced stage, symptoms can include:tirednessswollen ankles, feet or handsshortness of breathfeeling sickblood in your pee (urine)See a GP if you have persistent or worrying symptoms that you think could be caused by kidney disease.Find out more about the symptoms of CKD. Causes of CKDChronic kidney disease is usually caused by other conditions that put a strain on the kidneys. Often it's the result of a combination of different problems.CKD can be caused by:high blood pressure – over time, this can put strain on the small blood vessels in the kidneys and stop the kidneys working properlydiabetes – too much glucose in your blood can damage the tiny filters in the kidneyshigh cholesterol – this can cause a build-up of fatty deposits in the blood vessels supplying your kidneys, which can make it harder for them to work properlykidney infectionsglomerulonephritis – kidney inflammationautosomal dominant polycystic kidney disease – an inherited condition where growths called cysts develop in the kidneysblockages in the flow of urine – for example, from kidney stones that keep coming back, or an enlarged prostatelong-term, regular use of certain medicines – such as lithium and non-steroidal anti-inflammatory drugs (NSAIDs)You can help prevent CKD by making healthy lifestyle changes and ensuring any underlying conditions you have are well controlled. Tests for CKDCKD can be diagnosed using blood and urine tests. These tests look for high levels of certain substances in your blood and urine that are signs your kidneys are not working properly.If you're at a high risk of developing kidney disease (for example, you have a known risk factor such as high blood pressure or diabetes), you may be advised to have regular tests to check for CKD so it's found at an early stage.The results of your blood and urine tests can be used to tell the stage of your kidney disease. This is a number that reflects how severe the damage to your kidneys is, with a higher number indicating more serious CKD.Find out more about how CKD is diagnosed. Treatments for CKDThere's no cure for CKD, but treatment can help relieve the symptoms and stop it getting worse.Your treatment will depend on how severe your condition is.The main treatments are:lifestyle changes to help you remain as healthy as possiblemedicine to control associated problems such as high blood pressure and high cholesterolmedicine that can help the kidneys keep working for longerdialysis – treatment to replicate some of the kidney's functions (this may be necessary in advanced CKD)kidney transplant – this may also be necessary in advanced CKDYou'll also be advised to have regular check-ups to monitor your condition.Find out more about how CKD is treated and living with CKD. Outlook for CKDCKD can range from a mild condition with no or few symptoms, to a very serious condition where the kidneys stop working, sometimes called kidney failure.Most people with CKD will be able to control their condition with medicine and regular check-ups. CKD only progresses to kidney failure in around 2 in 100 people with the condition.If you have CKD, even if it's mild, you're at an increased risk of developing other serious problems, such as cardiovascular disease. This is a group of conditions affecting the heart and blood vessels, which includes heart attack and stroke.Cardiovascular disease is one of the main causes of death in people with kidney disease, although healthy lifestyle changes and medicine can help reduce your risk of developing it.Want to know more?Kidney Care UK: Chronic kidney diseaseNational Kidney Federation: What is kidney disease?Kidney Research UK: Chronic kidney disease Information: Social care and support guideIf you:need help with day-to-day living because of illness or disabilitycare for someone regularly because they're ill, elderly or disabled – including family membersOur guide to social care and support explains your options and where you can get support. Page last reviewed: 22 March 2023 Next review due: 22 March 2026 Next : Symptoms",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-chronic-kidney-disease-overview-001",
+      "word_count": 763
+    },
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Symptoms of CKD",
+      "content": "There are usually no symptoms of kidney disease in the early stages. It may only be diagnosed if you have a blood or urine test for another reason and the results show a possible problem with your kidneys. At a more advanced stage, symptoms can include: tirednessswollen ankles, feet or handsshortness of breathfeeling sickblood in your pee (urine) See a GP if you have persistent or worrying symptoms that you think could be caused by kidney disease. Find out more about the symptoms of CKD.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-symptoms-of-ckd-002",
+      "word_count": 85
+    },
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Causes of CKD",
+      "content": "Chronic kidney disease is usually caused by other conditions that put a strain on the kidneys. Often it's the result of a combination of different problems. CKD can be caused by: high blood pressure – over time, this can put strain on the small blood vessels in the kidneys and stop the kidneys working properlydiabetes – too much glucose in your blood can damage the tiny filters in the kidneyshigh cholesterol – this can cause a build-up of fatty deposits in the blood vessels supplying your kidneys, which can make it harder for them to work properlykidney infectionsglomerulonephritis – kidney inflammationautosomal dominant polycystic kidney disease – an inherited condition where growths called cysts develop in the kidneysblockages in the flow of urine – for example, from kidney stones that keep coming back, or an enlarged prostatelong-term, regular use of certain medicines – such as lithium and non-steroidal anti-inflammatory drugs (NSAIDs) You can help prevent CKD by making healthy lifestyle changes and ensuring any underlying conditions you have are well controlled.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-causes-of-ckd-003",
+      "word_count": 170
+    },
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Tests for CKD",
+      "content": "CKD can be diagnosed using blood and urine tests. These tests look for high levels of certain substances in your blood and urine that are signs your kidneys are not working properly. If you're at a high risk of developing kidney disease (for example, you have a known risk factor such as high blood pressure or diabetes), you may be advised to have regular tests to check for CKD so it's found at an early stage. The results of your blood and urine tests can be used to tell the stage of your kidney disease. This is a number that reflects how severe the damage to your kidneys is, with a higher number indicating more serious CKD. Find out more about how CKD is diagnosed.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-tests-for-ckd-004",
+      "word_count": 125
+    },
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Treatments for CKD",
+      "content": "There's no cure for CKD, but treatment can help relieve the symptoms and stop it getting worse. Your treatment will depend on how severe your condition is. The main treatments are: lifestyle changes to help you remain as healthy as possiblemedicine to control associated problems such as high blood pressure and high cholesterolmedicine that can help the kidneys keep working for longerdialysis – treatment to replicate some of the kidney's functions (this may be necessary in advanced CKD)kidney transplant – this may also be necessary in advanced CKD You'll also be advised to have regular check-ups to monitor your condition. Find out more about how CKD is treated and living with CKD.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-treatments-for-ckd-005",
+      "word_count": 112
+    },
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Outlook for CKD",
+      "content": "CKD can range from a mild condition with no or few symptoms, to a very serious condition where the kidneys stop working, sometimes called kidney failure. Most people with CKD will be able to control their condition with medicine and regular check-ups. CKD only progresses to kidney failure in around 2 in 100 people with the condition. If you have CKD, even if it's mild, you're at an increased risk of developing other serious problems, such as cardiovascular disease. This is a group of conditions affecting the heart and blood vessels, which includes heart attack and stroke. Cardiovascular disease is one of the main causes of death in people with kidney disease, although healthy lifestyle changes and medicine can help reduce your risk of developing it.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-outlook-for-ckd-006",
+      "word_count": 126
+    },
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Want to know more?",
+      "content": "Kidney Care UK: Chronic kidney diseaseNational Kidney Federation: What is kidney disease?Kidney Research UK: Chronic kidney disease Information: Social care and support guideIf you:need help with day-to-day living because of illness or disabilitycare for someone regularly because they're ill, elderly or disabled – including family membersOur guide to social care and support explains your options and where you can get support.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-want-to-know-more-007",
+      "word_count": 61
+    },
+    {
+      "page_title": "Chronic kidney disease",
+      "section_title": "Social care and support guide",
+      "content": "If you: need help with day-to-day living because of illness or disabilitycare for someone regularly because they're ill, elderly or disabled – including family members Our guide to social care and support explains your options and where you can get support.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/",
+      "chunk_id": "nhs-kidney-disease-social-care-and-support-guide-008",
+      "word_count": 41
+    },
+    {
+      "page_title": "Chronic kidney disease - Symptoms",
+      "section_title": "Chronic kidney disease - Symptoms — Overview",
+      "content": "Many people with chronic kidney disease (CKD) will not have symptoms because it does not usually cause problems until it reaches an advanced stage. Early stages of CKDKidney disease does not tend to cause symptoms when it's at an early stage.This is because the body is usually able to cope with a significant reduction in kidney function.Kidney disease is often only diagnosed at this stage if a routine test for another condition, such as a blood or urine test, detects a possible problem.If it's found at an early stage, medicine and regular tests to monitor it may help stop it becoming more advanced. Later stages of CKDA number of symptoms can develop if kidney disease is not found early or it gets worse despite treatment.Symptoms can include:weight loss and poor appetiteswollen ankles, feet or hands – as a result of water retention (oedema)shortness of breathtirednessblood in your pee (urine)an increased need to pee – particularly at nightdifficulty sleeping (insomnia)itchy skinmuscle crampsfeeling sickheadacheserectile dysfunction in menThis stage of CKD is known as kidney failure, end-stage renal disease or established renal failure. It may eventually require treatment with dialysis or a kidney transplant. When to get medical adviceSee a GP if you have persistent or worrying symptoms that you think could be caused by kidney disease.The symptoms of kidney disease can be caused by many less serious conditions, so it's important to get a proper diagnosis.If you do have CKD, it's best to get it diagnosed as soon as possible. Kidney disease can be diagnosed by having blood and urine tests.Find out more about how CKD is diagnosed. Page last reviewed: 22 March 2023 Next review due: 22 March 2026 Previous : Chronic kidney disease Next : Diagnosis",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/symptoms/",
+      "chunk_id": "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+      "word_count": 286
+    },
+    {
+      "page_title": "Chronic kidney disease - Symptoms",
+      "section_title": "Early stages of CKD",
+      "content": "Kidney disease does not tend to cause symptoms when it's at an early stage. This is because the body is usually able to cope with a significant reduction in kidney function. Kidney disease is often only diagnosed at this stage if a routine test for another condition, such as a blood or urine test, detects a possible problem. If it's found at an early stage, medicine and regular tests to monitor it may help stop it becoming more advanced.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/symptoms/",
+      "chunk_id": "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+      "word_count": 79
+    },
+    {
+      "page_title": "Chronic kidney disease - Symptoms",
+      "section_title": "Later stages of CKD",
+      "content": "A number of symptoms can develop if kidney disease is not found early or it gets worse despite treatment. Symptoms can include: weight loss and poor appetiteswollen ankles, feet or hands – as a result of water retention (oedema)shortness of breathtirednessblood in your pee (urine)an increased need to pee – particularly at nightdifficulty sleeping (insomnia)itchy skinmuscle crampsfeeling sickheadacheserectile dysfunction in men This stage of CKD is known as kidney failure, end-stage renal disease or established renal failure. It may eventually require treatment with dialysis or a kidney transplant.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/symptoms/",
+      "chunk_id": "nhs-kidney-disease-symptoms-later-stages-of-ckd-011",
+      "word_count": 88
+    },
+    {
+      "page_title": "Chronic kidney disease - Symptoms",
+      "section_title": "When to get medical advice",
+      "content": "See a GP if you have persistent or worrying symptoms that you think could be caused by kidney disease. The symptoms of kidney disease can be caused by many less serious conditions, so it's important to get a proper diagnosis. If you do have CKD, it's best to get it diagnosed as soon as possible. Kidney disease can be diagnosed by having blood and urine tests. Find out more about how CKD is diagnosed.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/symptoms/",
+      "chunk_id": "nhs-kidney-disease-symptoms-when-to-get-medical-advice-012",
+      "word_count": 74
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "Chronic kidney disease - Diagnosis — Overview",
+      "content": "Chronic kidney disease (CKD) can be diagnosed with blood and urine tests.In many cases, CKD is only found when a routine blood or urine test you have for another problem shows that your kidneys may not be working normally. Who should be tested for CKD? See a GP if you have persistent symptoms of CKD, such as:weight loss or poor appetiteswollen ankles, feet or hands (oedema)shortness of breathtirednessblood in your pee (urine)peeing more than usual, particularly at nightThe GP can look for other possible causes and arrange tests if necessary.Because CKD often has no symptoms in the early stages, some people at a higher risk should be tested regularly.Regular testing is recommended if you have:high blood pressurediabetesacute kidney injury – sudden damage to the kidneys that causes them to stop working properlycardiovascular disease – conditions that affect the heart, arteries and veins, such as coronary heart disease or heart failureother conditions that can affect the kidneys – such as kidney stones, an enlarged prostate or lupusa family history of advanced CKD or an inherited kidney diseaseprotein or blood in your urine where there's no known causeChildren and young people with one working kidney should also be tested regularly.You're also more likely to develop kidney disease if you're black or of south Asian origin.People taking long-term medicines that can affect the kidneys, such as lithium, omeprazole or non-steroidal anti-inflammatory drugs (NSAIDs), should also be tested regularly.Talk to the GP if you think you may need regular testing for kidney disease. Tests for CKD Blood testThe main test for kidney disease is a blood test. The test measures the levels of a waste product called creatinine in your blood.A doctor uses your blood test results, plus your age, size, and gender to calculate how many millilitres of waste your kidneys should be able to filter in a minute.This calculation is known as your estimated glomerular filtration rate (eGFR).Healthy kidneys should be able to filter more than 90ml/min. You may have CKD if your rate is lower than this.Urine testA urine test is also done to:check the levels of substances called albumin and creatinine in your urine – known as the albumin:creatinine ratio, or ACRcheck for blood or protein in your urineAlongside your eGFR, urine tests can help give a more accurate picture of how well your kidneys are working.Other testsSometimes other tests are also used to assess the level of damage to your kidneys.These may include:an ultrasound scan, MRI scan or CT scan – to see what the kidneys look like and check whether there are any blockagesa kidney biopsy – a small sample of kidney tissue is removed and the cells are examined under a microscope for signs of damage Information: View your results onlineResults of tests you had at your GP surgery, and results that have been shared with your GP surgery, may be available in your online GP health record.View test results in your GP health record Test results and stages of CKD Your test results can be used to determine how damaged your kidneys are, known as the stage of CKD.This can help your doctor decide the best treatment for you and how often you should have tests to monitor your condition.Your eGFR results is given as a stage from 1 of 5:stage 1 (G1) – a normal eGFR above 90ml/min, but other tests have detected signs of kidney damagestage 2 (G2) – a slightly reduced eGFR of 60 to 89ml/min, with other signs of kidney damagestage 3a (G3a) – an eGFR of 45 to 59ml/minstage 3b (G3b) – an eGFR of 30 to 44ml/minstage 4 (G4) – an eGFR of 15 to 29ml/minstage 5 (G5) – an eGFR below 15ml/min, meaning the kidneys have lost almost all of their functionYour ACR result is given as a stage from 1 to 3:A1 – an ACR of less than 3mg/mmolA2 – an ACR of 3 to 30mg/mmolA3 – an ACR of more than 30mg/mmolFor both eGFR and ACR, a higher stage indicates more severe kidney disease.Want to know more?Kidney Research UK: Stages of kidney diseaseUK Kidney Association: CKD stagesKidney Care UK: Kidney failure Page last reviewed: 22 March 2023 Next review due: 22 March 2026 Previous : Symptoms Next : Treatment",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013",
+      "word_count": 702
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "Who should be tested for CKD?",
+      "content": "See a GP if you have persistent symptoms of CKD, such as: weight loss or poor appetiteswollen ankles, feet or hands (oedema)shortness of breathtirednessblood in your pee (urine)peeing more than usual, particularly at night The GP can look for other possible causes and arrange tests if necessary. Because CKD often has no symptoms in the early stages, some people at a higher risk should be tested regularly. Regular testing is recommended if you have: high blood pressurediabetesacute kidney injury – sudden damage to the kidneys that causes them to stop working properlycardiovascular disease – conditions that affect the heart, arteries and veins, such as coronary heart disease or heart failureother conditions that can affect the kidneys – such as kidney stones, an enlarged prostate or lupusa family history of advanced CKD or an inherited kidney diseaseprotein or blood in your urine where there's no known cause Children and young people with one working kidney should also be tested regularly. You're also more likely to develop kidney disease if you're black or of south Asian origin. People taking long-term medicines that can affect the kidneys, such as lithium, omeprazole or non-steroidal anti-inflammatory drugs (NSAIDs), should also be tested regularly. Talk to the GP if you think you may need regular testing for kidney disease.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-who-should-be-tested-for-ckd-014",
+      "word_count": 213
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "Blood test",
+      "content": "The main test for kidney disease is a blood test. The test measures the levels of a waste product called creatinine in your blood. A doctor uses your blood test results, plus your age, size, and gender to calculate how many millilitres of waste your kidneys should be able to filter in a minute. This calculation is known as your estimated glomerular filtration rate (eGFR). Healthy kidneys should be able to filter more than 90ml/min. You may have CKD if your rate is lower than this.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-blood-test-015",
+      "word_count": 86
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "Urine test",
+      "content": "A urine test is also done to: check the levels of substances called albumin and creatinine in your urine – known as the albumin:creatinine ratio, or ACRcheck for blood or protein in your urine Alongside your eGFR, urine tests can help give a more accurate picture of how well your kidneys are working.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-urine-test-016",
+      "word_count": 53
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "Other tests",
+      "content": "Sometimes other tests are also used to assess the level of damage to your kidneys. These may include: an ultrasound scan, MRI scan or CT scan – to see what the kidneys look like and check whether there are any blockagesa kidney biopsy – a small sample of kidney tissue is removed and the cells are examined under a microscope for signs of damage",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-other-tests-017",
+      "word_count": 64
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "View your results online",
+      "content": "Results of tests you had at your GP surgery, and results that have been shared with your GP surgery, may be available in your online GP health record. View test results in your GP health record",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-view-your-results-online-018",
+      "word_count": 36
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "Test results and stages of CKD",
+      "content": "Your test results can be used to determine how damaged your kidneys are, known as the stage of CKD. This can help your doctor decide the best treatment for you and how often you should have tests to monitor your condition. Your eGFR results is given as a stage from 1 of 5: stage 1 (G1) – a normal eGFR above 90ml/min, but other tests have detected signs of kidney damagestage 2 (G2) – a slightly reduced eGFR of 60 to 89ml/min, with other signs of kidney damagestage 3a (G3a) – an eGFR of 45 to 59ml/minstage 3b (G3b) – an eGFR of 30 to 44ml/minstage 4 (G4) – an eGFR of 15 to 29ml/minstage 5 (G5) – an eGFR below 15ml/min, meaning the kidneys have lost almost all of their function Your ACR result is given as a stage from 1 to 3: A1 – an ACR of less than 3mg/mmolA2 – an ACR of 3 to 30mg/mmolA3 – an ACR of more than 30mg/mmol For both eGFR and ACR, a higher stage indicates more severe kidney disease.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-test-results-and-stages-of-ckd-019",
+      "word_count": 179
+    },
+    {
+      "page_title": "Chronic kidney disease - Diagnosis",
+      "section_title": "Want to know more?",
+      "content": "Kidney Research UK: Stages of kidney diseaseUK Kidney Association: CKD stagesKidney Care UK: Kidney failure",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/diagnosis/",
+      "chunk_id": "nhs-kidney-disease-diagnosis-want-to-know-more-020",
+      "word_count": 15
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Chronic kidney disease - Treatment — Overview",
+      "content": "There's no cure for chronic kidney disease (CKD), but treatment can help relieve the symptoms and stop it getting worse.Your treatment will depend on the stage of your CKD.The main treatments are:lifestyle changes – to help you stay as healthy as possiblemedicine – to control associated problems, such as high blood pressure and high cholesterolmedicine to keep the kidneys working for longerdialysis – treatment to replicate some of the kidney's functions, which may be necessary in advanced (stage 5) CKDkidney transplant – this may also be necessary in advanced (stage 5) CKD Lifestyle changesThe following lifestyle measures are usually recommended for people with kidney disease:stop smoking if you smokeeat a healthy, balanced dietrestrict your salt intake to less than 6g a day – that's around 1 teaspoondo regular exercise – aim to do at least 150 minutes a weekmanage your alcohol intake so you drink no more than the recommended limit of 14 units of alcohol a weeklose weight if you're overweight or obeseavoid over-the-counter non-steroidal anti-inflammatory drugs (NSAIDs), such as ibuprofen, except when advised to by a medical professional – these medicines can harm your kidneys if you have kidney diseaseFind out more about living with CKD and what you can do to stay healthy. MedicineThere's no medicine that can cure CKD, but medicine can help control many of the problems that cause the condition, the complications that can happen as a result of it and keep the kidneys working for longer.You may need to take medicine to treat or prevent the different problems caused by CKD.High blood sugar levelsSGLT2 inhibitors are medicines that help lower blood sugar levels. This can be useful for some people with CKD as it stops their kidneys working so hard. This can help keep kidneys working for longer.An SGLT2 inhibitor called dapagliflozin is used to treat CKD and is often given to people who are also living with diabetes. But it's not suitable for everybody with CKD. Your care team can tell you more about dapagliflozin.High blood pressureGood control of blood pressure is vital to protect the kidneys.People with kidney disease should usually aim to get their blood pressure down to below 140/90mmHg, but you should aim to get it down to below 130/80mmHg if you also have diabetes.There are many types of blood pressure medicines, but medicines called angiotensin converting enzyme (ACE) inhibitors are often used. Examples include ramipril, enalapril and lisinopril.Side effects of ACE inhibitors can include:a persistent dry coughdizzinesstiredness or weaknessheadachesIf the side effects of ACE inhibitors are particularly troublesome, you can be given a medicine called an angiotensin-II receptor blocker (ARB) instead.Find out more about how high blood pressure is treated. High cholesterolPeople with CKD have a higher risk of cardiovascular disease, including heart attack and stroke.This is because some of the causes of kidney disease are the same as those for cardiovascular disease, including high blood pressure and high cholesterol.You may be prescribed medicines called statins to reduce your risk of developing cardiovascular disease. Examples include atorvastatin and simvastatin.Side effects of statins can include:headachesfeeling sickconstipation or diarrhoeamuscle and joint painFind out more about how high cholesterol is treated.High potassium levelsPeople with CKD can develop high potassium levels in their blood, called hyperkalaemia, because their kidneys do not work properly.Hyperkalaemia can cause muscle weakness, stiffness and tiredness. If it becomes severe, it can cause an irregular heartbeat (arrhythmia) which can lead to a heart attack.If you have CKD, it's important to avoid taking potassium supplements and some medicines used to treat high blood pressure and heart failure because they can make your potassium levels too high. Talk to a GP about the medicines you take if you're worried.A medicine called sodium zirconium cyclosilicate can be used to treat hyperkalaemia in adults, but only if it's used:in emergency care for acute life-threatening hyperkalaemia alongside standard carein people with hyperkalaemia that does not get better, CKD stage 3b to 5, or heart failurePeople with hyperkalaemia that does not get better (called persistent CKD) who also have CKD stage 3b to 5, or heart failure, should only take sodium zirconium cyclosilicate if they:have a serum potassium level of at least 6.0 mmol/litre andare not also taking a certain amount of renin-angiotensin-aldosterone system (RAAS) inhibitor because of hyperkalaemia andare not on dialysisYou should stop taking sodium zirconium cyclosilicate if RAAS inhibitors are no longer suitable for you.Water retentionYou may get swelling in your ankles, feet and hands if you have kidney disease.This is because your kidneys are not as effective at removing fluid from your blood, causing it to build up in body tissues (oedema).You may be advised to reduce your daily salt and fluid intake, including fluids in food such as soups and yoghurts, to help reduce the swelling.In some cases you may also be given diuretics (tablets to help you pee more), such as furosemide.Side effects of diuretics can include dehydration and reduced levels of sodium and potassium in the blood.AnaemiaMany people with advanced-stage CKD develop anaemia, which is a lack of red blood cells.Symptoms of anaemia include:tirednesslack of energyshortness of breatha pounding, fluttering or irregular heartbeat (palpitations)If you have anaemia, you may be given tablets or injections to help your body produce more red blood cells.If you have an iron deficiency as well, iron supplements may also be recommended.Find out more about how iron deficiency anaemia is treated.Want to know more? National Institute for Health and Care Excellence (NICE): treating anaemia in people with chronic kidney diseaseBone problemsIf your kidneys are severely damaged, you can get a build-up of phosphate in your body because your kidneys cannot get rid of it.Along with calcium, phosphate is important for maintaining healthy bones. But if your phosphate level rises too much, it can upset the balance of calcium in your body and lead to thinning of the bones.You may be advised to limit the amount food you eat which are high in phosphate, such as red meat, dairy products, eggs and fish.If this does not lower your phosphate level enough, you may be given medicines called phosphate binders. Commonly used medicines include calcium acetate and calcium carbonate.Some people with CKD also have low levels of vitamin D, which is necessary for healthy bones.If you're low in vitamin D, you may be given a supplement called colecalciferol or ergocalciferol to boost your vitamin D level. GlomerulonephritisKidney disease can be caused by inflammation of the filters inside the kidneys, known as glomerulonephritis.In some cases this happens as a result of the immune system mistakenly attacking the kidneys.If a kidney biopsy finds this is the cause of your kidney problems, you may be prescribed medicine to reduce the activity of your immune system, such as a steroid or a medicine called cyclophosphamide.Want to know more?Kidney Care UK: medicines for chronic kidney disease Improving muscle strengthIf you are having a bad flare-up and are unable to exercise, you may be offered electrical stimulation to make your muscles stronger.This is where electrodes are placed on your skin and small electrical impulses are sent to weak muscles, usually in your arms or legs. DialysisFor a small proportion of people with CKD, the kidneys will eventually stop working.This usually happens gradually, so there should be time to plan the next stage of your treatment.One of the options when CKD reaches this stage is dialysis. This is a method of removing waste products and excess fluid from the blood.There are 2 main types of dialysis:haemodialysis – this involves diverting blood into an external machine, where it's filtered before being returned to the bodyperitoneal dialysis – this involves pumping dialysis fluid into a space inside your tummy to draw out waste products from the blood as they pass through vessels lining the inside of your tummyHaemodialysis is usually done about 3 times a week, either at hospital or at home. Peritoneal dialysis is normally done at home several times a day, or overnight.If you don't have a kidney transplant, treatment with dialysis will usually need to be lifelong.Talk to your doctor about the pros and cons of each type of dialysis and which type you would prefer if your kidney function becomes severely reduced.Want to know more?Find out more about dialysisKidney Patient Guide: treating kidney failure with dialysisKidney Care UK: dialysis Kidney transplantAn alternative to dialysis for people with severely reduced kidney function is a kidney transplant.This is often the most effective treatment for advanced kidney disease, but it involves major surgery and taking medicines (immunosuppressants) for the rest of your life to stop your body attacking the donor organ.You can live with one kidney, which means donor kidneys can come from living or recently deceased donors. But there's still a shortage of donors, and you could wait months or years for a transplant.You may need to have dialysis while you wait for a transplant.Survival rates for kidney transplants are very good. About 90% of transplants still function after 5 years and many work usefully after 10 years or more.Want to know more?Kidney Patient Guide: transplantsKidney Care UK: kidney transplant Supportive treatmentYou'll be offered supportive treatment if you decide not to have dialysis or a transplant for kidney failure, or they're not suitable for you. This is also called palliative or conservative care.The aim is to treat and control the symptoms of kidney failure. It includes medical, psychological and practical care for both the person with kidney failure and their family, including discussion about how you feel and planning for the end of life.Many people choose supportive treatment because they:are unlikely to benefit from or have a good quality of life with treatmentdo not want to go through the inconvenience of treatment with dialysisare advised against dialysis because they have other serious illnesses, and the negative aspects of treatment outweigh any likely benefitshave been on dialysis, but have decided to stop this treatmentare being treated with dialysis, but have another serious illness, such as severe heart disease or stroke, that will shorten their lifeSupportive care through the kidney unit can still help you to live for some time with a good quality of life.Doctors and nurses will make sure you receive:medicines to protect your remaining kidney function for as long as possiblemedicines to treat other symptoms of kidney failure, such as feeling out of breath, anaemia, loss of appetite or itchy skinhelp to plan your home and money affairsbereavement support for your familyWant to know more?Cruse Bereavement CareKidney Patient Guide: the emotional effects of kidney failureKidney Research UK: information on choosing not to start dialysisKidney Care UK: deciding not to have dialysis (conservative treatment) Page last reviewed: 22 March 2023 Next review due: 22 March 2026 Previous : Diagnosis Next : Living with",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021",
+      "word_count": 1771
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Lifestyle changes",
+      "content": "The following lifestyle measures are usually recommended for people with kidney disease: stop smoking if you smokeeat a healthy, balanced dietrestrict your salt intake to less than 6g a day – that's around 1 teaspoondo regular exercise – aim to do at least 150 minutes a weekmanage your alcohol intake so you drink no more than the recommended limit of 14 units of alcohol a weeklose weight if you're overweight or obeseavoid over-the-counter non-steroidal anti-inflammatory drugs (NSAIDs), such as ibuprofen, except when advised to by a medical professional – these medicines can harm your kidneys if you have kidney disease Find out more about living with CKD and what you can do to stay healthy.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-lifestyle-changes-022",
+      "word_count": 115
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Medicine",
+      "content": "There's no medicine that can cure CKD, but medicine can help control many of the problems that cause the condition, the complications that can happen as a result of it and keep the kidneys working for longer. You may need to take medicine to treat or prevent the different problems caused by CKD.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-medicine-023",
+      "word_count": 53
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "High blood sugar levels",
+      "content": "SGLT2 inhibitors are medicines that help lower blood sugar levels. This can be useful for some people with CKD as it stops their kidneys working so hard. This can help keep kidneys working for longer. An SGLT2 inhibitor called dapagliflozin is used to treat CKD and is often given to people who are also living with diabetes. But it's not suitable for everybody with CKD. Your care team can tell you more about dapagliflozin.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-high-blood-sugar-levels-024",
+      "word_count": 74
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "High blood pressure",
+      "content": "Good control of blood pressure is vital to protect the kidneys. People with kidney disease should usually aim to get their blood pressure down to below 140/90mmHg, but you should aim to get it down to below 130/80mmHg if you also have diabetes. There are many types of blood pressure medicines, but medicines called angiotensin converting enzyme (ACE) inhibitors are often used. Examples include ramipril, enalapril and lisinopril. Side effects of ACE inhibitors can include: a persistent dry coughdizzinesstiredness or weaknessheadaches If the side effects of ACE inhibitors are particularly troublesome, you can be given a medicine called an angiotensin-II receptor blocker (ARB) instead. Find out more about how high blood pressure is treated.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-high-blood-pressure-025",
+      "word_count": 114
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "High cholesterol",
+      "content": "People with CKD have a higher risk of cardiovascular disease, including heart attack and stroke. This is because some of the causes of kidney disease are the same as those for cardiovascular disease, including high blood pressure and high cholesterol. You may be prescribed medicines called statins to reduce your risk of developing cardiovascular disease. Examples include atorvastatin and simvastatin. Side effects of statins can include: headachesfeeling sickconstipation or diarrhoeamuscle and joint pain Find out more about how high cholesterol is treated.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-high-cholesterol-026",
+      "word_count": 82
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "High potassium levels",
+      "content": "People with CKD can develop high potassium levels in their blood, called hyperkalaemia, because their kidneys do not work properly. Hyperkalaemia can cause muscle weakness, stiffness and tiredness. If it becomes severe, it can cause an irregular heartbeat (arrhythmia) which can lead to a heart attack. If you have CKD, it's important to avoid taking potassium supplements and some medicines used to treat high blood pressure and heart failure because they can make your potassium levels too high. Talk to a GP about the medicines you take if you're worried. A medicine called sodium zirconium cyclosilicate can be used to treat hyperkalaemia in adults, but only if it's used: in emergency care for acute life-threatening hyperkalaemia alongside standard carein people with hyperkalaemia that does not get better, CKD stage 3b to 5, or heart failure People with hyperkalaemia that does not get better (called persistent CKD) who also have CKD stage 3b to 5, or heart failure, should only take sodium zirconium cyclosilicate if they: have a serum potassium level of at least 6.0 mmol/litre andare not also taking a certain amount of renin-angiotensin-aldosterone system (RAAS) inhibitor because of hyperkalaemia andare not on dialysis You should stop taking sodium zirconium cyclosilicate if RAAS inhibitors are no longer suitable for you.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-high-potassium-levels-027",
+      "word_count": 210
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Water retention",
+      "content": "You may get swelling in your ankles, feet and hands if you have kidney disease. This is because your kidneys are not as effective at removing fluid from your blood, causing it to build up in body tissues (oedema). You may be advised to reduce your daily salt and fluid intake, including fluids in food such as soups and yoghurts, to help reduce the swelling. In some cases you may also be given diuretics (tablets to help you pee more), such as furosemide. Side effects of diuretics can include dehydration and reduced levels of sodium and potassium in the blood.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-water-retention-028",
+      "word_count": 100
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Anaemia",
+      "content": "Many people with advanced-stage CKD develop anaemia, which is a lack of red blood cells. Symptoms of anaemia include: tirednesslack of energyshortness of breatha pounding, fluttering or irregular heartbeat (palpitations) If you have anaemia, you may be given tablets or injections to help your body produce more red blood cells. If you have an iron deficiency as well, iron supplements may also be recommended. Find out more about how iron deficiency anaemia is treated. Want to know more? National Institute for Health and Care Excellence (NICE): treating anaemia in people with chronic kidney disease",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-anaemia-029",
+      "word_count": 94
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Bone problems",
+      "content": "If your kidneys are severely damaged, you can get a build-up of phosphate in your body because your kidneys cannot get rid of it. Along with calcium, phosphate is important for maintaining healthy bones. But if your phosphate level rises too much, it can upset the balance of calcium in your body and lead to thinning of the bones. You may be advised to limit the amount food you eat which are high in phosphate, such as red meat, dairy products, eggs and fish. If this does not lower your phosphate level enough, you may be given medicines called phosphate binders. Commonly used medicines include calcium acetate and calcium carbonate. Some people with CKD also have low levels of vitamin D, which is necessary for healthy bones. If you're low in vitamin D, you may be given a supplement called colecalciferol or ergocalciferol to boost your vitamin D level.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-bone-problems-030",
+      "word_count": 149
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Glomerulonephritis",
+      "content": "Kidney disease can be caused by inflammation of the filters inside the kidneys, known as glomerulonephritis. In some cases this happens as a result of the immune system mistakenly attacking the kidneys. If a kidney biopsy finds this is the cause of your kidney problems, you may be prescribed medicine to reduce the activity of your immune system, such as a steroid or a medicine called cyclophosphamide. Want to know more? Kidney Care UK: medicines for chronic kidney disease",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-glomerulonephritis-031",
+      "word_count": 79
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Improving muscle strength",
+      "content": "If you are having a bad flare-up and are unable to exercise, you may be offered electrical stimulation to make your muscles stronger. This is where electrodes are placed on your skin and small electrical impulses are sent to weak muscles, usually in your arms or legs.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-improving-muscle-strength-032",
+      "word_count": 47
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Dialysis",
+      "content": "For a small proportion of people with CKD, the kidneys will eventually stop working. This usually happens gradually, so there should be time to plan the next stage of your treatment. One of the options when CKD reaches this stage is dialysis. This is a method of removing waste products and excess fluid from the blood. There are 2 main types of dialysis: haemodialysis – this involves diverting blood into an external machine, where it's filtered before being returned to the bodyperitoneal dialysis – this involves pumping dialysis fluid into a space inside your tummy to draw out waste products from the blood as they pass through vessels lining the inside of your tummy Haemodialysis is usually done about 3 times a week, either at hospital or at home. Peritoneal dialysis is normally done at home several times a day, or overnight. If you don't have a kidney transplant, treatment with dialysis will usually need to be lifelong. Talk to your doctor about the pros and cons of each type of dialysis and which type you would prefer if your kidney function becomes severely reduced.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-dialysis-033",
+      "word_count": 185
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Want to know more?",
+      "content": "Find out more about dialysisKidney Patient Guide: treating kidney failure with dialysisKidney Care UK: dialysis",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-want-to-know-more-034",
+      "word_count": 15
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Kidney transplant",
+      "content": "An alternative to dialysis for people with severely reduced kidney function is a kidney transplant. This is often the most effective treatment for advanced kidney disease, but it involves major surgery and taking medicines (immunosuppressants) for the rest of your life to stop your body attacking the donor organ. You can live with one kidney, which means donor kidneys can come from living or recently deceased donors. But there's still a shortage of donors, and you could wait months or years for a transplant. You may need to have dialysis while you wait for a transplant. Survival rates for kidney transplants are very good. About 90% of transplants still function after 5 years and many work usefully after 10 years or more.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-kidney-transplant-035",
+      "word_count": 122
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Want to know more?",
+      "content": "Kidney Patient Guide: transplantsKidney Care UK: kidney transplant",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-want-to-know-more-036",
+      "word_count": 8
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Supportive treatment",
+      "content": "You'll be offered supportive treatment if you decide not to have dialysis or a transplant for kidney failure, or they're not suitable for you. This is also called palliative or conservative care. The aim is to treat and control the symptoms of kidney failure. It includes medical, psychological and practical care for both the person with kidney failure and their family, including discussion about how you feel and planning for the end of life. Many people choose supportive treatment because they: are unlikely to benefit from or have a good quality of life with treatmentdo not want to go through the inconvenience of treatment with dialysisare advised against dialysis because they have other serious illnesses, and the negative aspects of treatment outweigh any likely benefitshave been on dialysis, but have decided to stop this treatmentare being treated with dialysis, but have another serious illness, such as severe heart disease or stroke, that will shorten their life Supportive care through the kidney unit can still help you to live for some time with a good quality of life. Doctors and nurses will make sure you receive: medicines to protect your remaining kidney function for as long as possiblemedicines to treat other symptoms of kidney failure, such as feeling out of breath, anaemia, loss of appetite or itchy skinhelp to plan your home and money affairsbereavement support for your family",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-supportive-treatment-037",
+      "word_count": 228
+    },
+    {
+      "page_title": "Chronic kidney disease - Treatment",
+      "section_title": "Want to know more?",
+      "content": "Cruse Bereavement CareKidney Patient Guide: the emotional effects of kidney failureKidney Research UK: information on choosing not to start dialysisKidney Care UK: deciding not to have dialysis (conservative treatment)",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+      "chunk_id": "nhs-kidney-disease-treatment-want-to-know-more-038",
+      "word_count": 29
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Chronic kidney disease - Living with — Overview",
+      "content": "Many people with chronic kidney disease (CKD) are able to live long lives without being unduly affected by the condition.Although it's not possible to repair damage that has already happened to your kidneys, CKD will not necessarily get worse. CKD only reaches an advanced stage in a small proportion of people.But even if your condition is mild, it's important to take good care of yourself to help stop it getting worse and reduce your risk of other health problems, such as cardiovascular disease. Looking after yourselfTake your medicineIt's very important that you take any prescribed medicine, even if you do not feel unwell. Some medicines are designed to prevent serious problems from happening in the future.It's also useful to read the information leaflet that comes with the medicine about possible interactions with other medicines or supplements.Speak to your care team if you have any concerns about the medicine you are taking, or if you are experiencing any side effects.Check with a doctor or pharmacist if you plan to take any over-the-counter medicines such as painkillers or nutritional supplements. These can sometimes affect your kidneys or interfere with your prescribed medicine.Read more about over-the-counter medicines and kidney disease on the National Kidney Federation website.Have a healthy dietIf you have CKD, you may not need a special diet. A healthy, balanced diet can help improve your general health and reduce your risk of developing further problems.A healthy, balanced diet should include:plenty of fruit and vegetables – aim for at least 5 portions a daymeals that include starchy foods, such as potatoes, wholegrain bread, rice or pastasome dairy or dairy alternativessome beans or pulses, fish, eggs, or meat as a source of proteinlow levels of saturated fat, salt and sugarGetting dietary adviceIf blood tests show you have high levels of potassium and phosphate in your blood, you may be referred to a dietician. Levels of these minerals may be high if your kidneys are unable to clear them from your blood.The dietician will give you advice about changes you can make to your diet that can help, such as how many calories you should be eating and how much potassium, phosphate and salt to include in your diet.Want to know more?Kidney Care UK: a healthy diet and lifestyle for your kidneysKidney Care UK: recipes approved by kidney nutrition specialistsExercise regularlyRegular physical activity can also help improve your general health.Do not be scared to exercise. Exercise is good for anyone with kidney disease, however severe. Not only will it boost your energy, help you sleep, strengthen your bones, ward off depression and keep you fit, it may also reduce your risk of problems such as heart disease.If you have mild to moderate CKD, your ability to exercise should not be reduced. You should be able to exercise as often and as vigorously as someone the same age as you with healthy kidneys.If your condition is more advanced or you're already on dialysis, your ability to exercise is likely to be reduced and you may become breathless and tired more quickly.But exercise is still beneficial. Start slowly and build up gradually. Check with your doctor before beginning a new exercise programme.Want to know more?Kidney Care UK: Lifestyle – diet, fluids and exerciseStop smokingIf you smoke, stopping smoking can improve your overall health and reduce your risk of many other health problems.Speak to a GP or NHS stop smoking service if you need help quitting. They can provide support and, if necessary, prescribe stop smoking treatments.Limit your alcohol consumptionYou may still be able to drink alcohol if you have kidney disease, but it's advisable not to exceed the recommended limits of more than 14 alcohol units a week.Speak to your GP or care team if you find it difficult to cut down the amount of alcohol you drink.Find out more about cutting down on alcohol.Get vaccinatedKidney disease can put a significant strain on your body and make you more vulnerable to infections.Everyone with the condition is encouraged to have the annual flu jab and the one-off pneumococcal vaccination.You can get these vaccinations at your GP surgery or a local pharmacy that offers a vaccination service. Regular reviews and monitoringYou'll have regular contact with your care team to monitor your condition.These appointments may involve:talking about your symptoms – such as whether they're affecting your normal activities or are getting worsea discussion about your medicine – including whether you are experiencing any side effectstests to monitor your kidney function and general healthIt's also a good opportunity to ask any questions you have or raise any other issues you'd like to discuss with your care team.You may also want to help monitor your condition at home – for example, by using a home blood pressure monitor.Contact your GP or healthcare team if your symptoms are getting worse or you develop new symptoms. Relationships and supportComing to terms with a condition such as CKD can put a strain on you, your family and your friends. It can be difficult to talk to people about your condition, even if they're close to you.Learning about CKD may help you and your family understand what to expect and to feel more in control of the illness, instead of feeling that your lives are now dominated by CKD and its treatment.Be open about how you feel, and let your family and friends know what they can do to help. However, do not feel shy about telling them that you need some time to yourself, if that is what you need.Get supportYour GP or healthcare team can reassure you if you have questions about your CKD, or you may find it helpful to talk to a trained counsellor, psychologist or specialist telephone helpline operator. Your GP surgery will have information on these.Some people find it helpful to talk to other people with CKD at a local support group or through an internet chat room.Want to know more?Kidney Patient Guide: The KPG forumNational Kidney Federation: Helpline Sex and pregnancySexHaving CKD can affect a sexual relationship. Some couples become closer after a diagnosis of CKD, while others find their loved ones are affected by worries about how they'll cope with the illness.Both men and women may have issues about body image and self-esteem, and this can affect a relationship.Problems such as erectile dysfunction and reduced sex drive are also fairly common in people with CKD.Try to share your feelings with your partner. If you have problems with sex that do not get better with time, speak to your care team. Treatment and support is available.Want to know more?Kidney Care UK: Sexual health and contraceptionPregnancyIf you have mild to moderate kidney disease, it's unlikely your condition or its treatment will affect your chances of having children.More advanced kidney disease may affect a woman's periods and reduce a man's sperm count, which can make it more difficult to get pregnant, although this does not mean you will not be able to have a child.It's important to use contraception if you do not want to get pregnant.If you do want to try for a baby, it's a good idea to speak to your healthcare team for advice first. There may be risks to mother and baby, and changes to your treatment or check-ups may be necessary.Want to know more?Kidney Care UK: Pregnancy and chronic kidney disease Work, finances and benefitsCan I continue working?If you're well enough, you can keep working for as long as you feel able.Talk to your employer as soon as you feel your condition is affecting your ability to do your job so you can find a solution that suits both of you. For example, it may be possible for you to work part-time.The Equality Act 2010 requires employers to make reasonable adjustments to help a person with a disability.This might, where possible, include changing or modifying tasks, altering work patterns, installing special equipment, allowing time off to attend appointments, or helping with travel to work.What happens if I can no longer work?If you have to stop work or work part-time because of CKD, you may find it hard to cope financially.You may be entitled to one or more of the following types of financial support:if you have a job but cannot work because of your illness, you are entitled to Statutory Sick Pay from your employer for up to 28 weeksif you do not have a job and cannot work because of your illness, you may be entitled to Employment and Support Allowanceif you're aged 65 or over, you may be able to get Attendance Allowanceif you're caring for someone with CKD, you may be entitled to Carer's Allowanceyou may be eligible for other benefits if you have children living at home or a low household incomeWant to know more?Kidney Patient Guide: FinancesMoneyHelperKidney Care UK: Benefits Holidays and insuranceIf you have mild CKD or you've had a transplant, going on holiday should not pose additional health problems, whether you're staying in the UK or going abroad.Speak to your care team before you travel, and make sure you take enough medicine with you to cover your trip and some back-up medicine in case you end up needing to stay away from home for longer than planned.If you're on dialysis, you can still enjoy holidays if you book your treatment before you go away.If you want to travel to another part of the UK, discuss your plans with your renal unit as early as you can so they can arrange dialysis at a unit close to your destination.In many parts of the country, the lack of facilities restricts the freedom of patients to travel, but Kidney Care UK's Dialysis Freedom service runs a holiday dialysis \"swap\" scheme to help with dialysis availability in other areas.If you're going abroad, it may be easier to arrange dialysis at short notice as some overseas centres have more facilities, although holiday destinations may get booked up early.It's a good idea to take out holiday health insurance in addition to carrying the Global Health Insurance Card (GHIC) – find out more about the GHIC on the Staysure website. Anyone with kidney disease should declare it as a pre-existing medical condition on standard insurance application forms. It may exclude you from some policies. Want to know more?Kidney Care UK: Travel insurance Page last reviewed: 22 March 2023 Next review due: 22 March 2026 Previous : Treatment Next : Prevention",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-chronic-kidney-disease-living-with-overv-039",
+      "word_count": 1725
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Take your medicine",
+      "content": "It's very important that you take any prescribed medicine, even if you do not feel unwell. Some medicines are designed to prevent serious problems from happening in the future. It's also useful to read the information leaflet that comes with the medicine about possible interactions with other medicines or supplements. Speak to your care team if you have any concerns about the medicine you are taking, or if you are experiencing any side effects. Check with a doctor or pharmacist if you plan to take any over-the-counter medicines such as painkillers or nutritional supplements. These can sometimes affect your kidneys or interfere with your prescribed medicine. Read more about over-the-counter medicines and kidney disease on the National Kidney Federation website.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-take-your-medicine-040",
+      "word_count": 120
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Have a healthy diet",
+      "content": "If you have CKD, you may not need a special diet. A healthy, balanced diet can help improve your general health and reduce your risk of developing further problems. A healthy, balanced diet should include: plenty of fruit and vegetables – aim for at least 5 portions a daymeals that include starchy foods, such as potatoes, wholegrain bread, rice or pastasome dairy or dairy alternativessome beans or pulses, fish, eggs, or meat as a source of proteinlow levels of saturated fat, salt and sugar",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-have-a-healthy-diet-041",
+      "word_count": 84
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Getting dietary advice",
+      "content": "If blood tests show you have high levels of potassium and phosphate in your blood, you may be referred to a dietician. Levels of these minerals may be high if your kidneys are unable to clear them from your blood. The dietician will give you advice about changes you can make to your diet that can help, such as how many calories you should be eating and how much potassium, phosphate and salt to include in your diet.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-getting-dietary-advice-042",
+      "word_count": 78
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Want to know more?",
+      "content": "Kidney Care UK: a healthy diet and lifestyle for your kidneysKidney Care UK: recipes approved by kidney nutrition specialists",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-want-to-know-more-043",
+      "word_count": 19
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Exercise regularly",
+      "content": "Regular physical activity can also help improve your general health. Do not be scared to exercise. Exercise is good for anyone with kidney disease, however severe. Not only will it boost your energy, help you sleep, strengthen your bones, ward off depression and keep you fit, it may also reduce your risk of problems such as heart disease. If you have mild to moderate CKD, your ability to exercise should not be reduced. You should be able to exercise as often and as vigorously as someone the same age as you with healthy kidneys. If your condition is more advanced or you're already on dialysis, your ability to exercise is likely to be reduced and you may become breathless and tired more quickly. But exercise is still beneficial. Start slowly and build up gradually. Check with your doctor before beginning a new exercise programme.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-exercise-regularly-044",
+      "word_count": 144
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Want to know more?",
+      "content": "Kidney Care UK: Lifestyle – diet, fluids and exercise",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-want-to-know-more-045",
+      "word_count": 9
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Stop smoking",
+      "content": "If you smoke, stopping smoking can improve your overall health and reduce your risk of many other health problems. Speak to a GP or NHS stop smoking service if you need help quitting. They can provide support and, if necessary, prescribe stop smoking treatments.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-stop-smoking-046",
+      "word_count": 44
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Limit your alcohol consumption",
+      "content": "You may still be able to drink alcohol if you have kidney disease, but it's advisable not to exceed the recommended limits of more than 14 alcohol units a week. Speak to your GP or care team if you find it difficult to cut down the amount of alcohol you drink. Find out more about cutting down on alcohol.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-limit-your-alcohol-consumption-047",
+      "word_count": 59
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Get vaccinated",
+      "content": "Kidney disease can put a significant strain on your body and make you more vulnerable to infections. Everyone with the condition is encouraged to have the annual flu jab and the one-off pneumococcal vaccination. You can get these vaccinations at your GP surgery or a local pharmacy that offers a vaccination service.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-get-vaccinated-048",
+      "word_count": 52
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Regular reviews and monitoring",
+      "content": "You'll have regular contact with your care team to monitor your condition. These appointments may involve: talking about your symptoms – such as whether they're affecting your normal activities or are getting worsea discussion about your medicine – including whether you are experiencing any side effectstests to monitor your kidney function and general health It's also a good opportunity to ask any questions you have or raise any other issues you'd like to discuss with your care team. You may also want to help monitor your condition at home – for example, by using a home blood pressure monitor. Contact your GP or healthcare team if your symptoms are getting worse or you develop new symptoms.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-regular-reviews-and-monitoring-049",
+      "word_count": 116
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Relationships and support",
+      "content": "Coming to terms with a condition such as CKD can put a strain on you, your family and your friends. It can be difficult to talk to people about your condition, even if they're close to you. Learning about CKD may help you and your family understand what to expect and to feel more in control of the illness, instead of feeling that your lives are now dominated by CKD and its treatment. Be open about how you feel, and let your family and friends know what they can do to help. However, do not feel shy about telling them that you need some time to yourself, if that is what you need.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-relationships-and-support-050",
+      "word_count": 113
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Get support",
+      "content": "Your GP or healthcare team can reassure you if you have questions about your CKD, or you may find it helpful to talk to a trained counsellor, psychologist or specialist telephone helpline operator. Your GP surgery will have information on these. Some people find it helpful to talk to other people with CKD at a local support group or through an internet chat room.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-get-support-051",
+      "word_count": 64
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Want to know more?",
+      "content": "Kidney Patient Guide: The KPG forumNational Kidney Federation: Helpline",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-want-to-know-more-052",
+      "word_count": 9
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Sex",
+      "content": "Having CKD can affect a sexual relationship. Some couples become closer after a diagnosis of CKD, while others find their loved ones are affected by worries about how they'll cope with the illness. Both men and women may have issues about body image and self-esteem, and this can affect a relationship. Problems such as erectile dysfunction and reduced sex drive are also fairly common in people with CKD. Try to share your feelings with your partner. If you have problems with sex that do not get better with time, speak to your care team. Treatment and support is available.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-sex-053",
+      "word_count": 99
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Want to know more?",
+      "content": "Kidney Care UK: Sexual health and contraception",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-want-to-know-more-054",
+      "word_count": 7
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Pregnancy",
+      "content": "If you have mild to moderate kidney disease, it's unlikely your condition or its treatment will affect your chances of having children. More advanced kidney disease may affect a woman's periods and reduce a man's sperm count, which can make it more difficult to get pregnant, although this does not mean you will not be able to have a child. It's important to use contraception if you do not want to get pregnant. If you do want to try for a baby, it's a good idea to speak to your healthcare team for advice first. There may be risks to mother and baby, and changes to your treatment or check-ups may be necessary.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-pregnancy-055",
+      "word_count": 113
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Want to know more?",
+      "content": "Kidney Care UK: Pregnancy and chronic kidney disease",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-want-to-know-more-056",
+      "word_count": 8
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Can I continue working?",
+      "content": "If you're well enough, you can keep working for as long as you feel able. Talk to your employer as soon as you feel your condition is affecting your ability to do your job so you can find a solution that suits both of you. For example, it may be possible for you to work part-time. The Equality Act 2010 requires employers to make reasonable adjustments to help a person with a disability. This might, where possible, include changing or modifying tasks, altering work patterns, installing special equipment, allowing time off to attend appointments, or helping with travel to work.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-can-i-continue-working-057",
+      "word_count": 100
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "What happens if I can no longer work?",
+      "content": "If you have to stop work or work part-time because of CKD, you may find it hard to cope financially. You may be entitled to one or more of the following types of financial support: if you have a job but cannot work because of your illness, you are entitled to Statutory Sick Pay from your employer for up to 28 weeksif you do not have a job and cannot work because of your illness, you may be entitled to Employment and Support Allowanceif you're aged 65 or over, you may be able to get Attendance Allowanceif you're caring for someone with CKD, you may be entitled to Carer's Allowanceyou may be eligible for other benefits if you have children living at home or a low household income",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-what-happens-if-i-can-no-longer-work-058",
+      "word_count": 128
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Want to know more?",
+      "content": "Kidney Patient Guide: FinancesMoneyHelperKidney Care UK: Benefits",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-want-to-know-more-059",
+      "word_count": 7
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Holidays and insurance",
+      "content": "If you have mild CKD or you've had a transplant, going on holiday should not pose additional health problems, whether you're staying in the UK or going abroad. Speak to your care team before you travel, and make sure you take enough medicine with you to cover your trip and some back-up medicine in case you end up needing to stay away from home for longer than planned. If you're on dialysis, you can still enjoy holidays if you book your treatment before you go away. If you want to travel to another part of the UK, discuss your plans with your renal unit as early as you can so they can arrange dialysis at a unit close to your destination. In many parts of the country, the lack of facilities restricts the freedom of patients to travel, but Kidney Care UK's Dialysis Freedom service runs a holiday dialysis \"swap\" scheme to help with dialysis availability in other areas. If you're going abroad, it may be easier to arrange dialysis at short notice as some overseas centres have more facilities, although holiday destinations may get booked up early. It's a good idea to take out holiday health insurance in addition to carrying the Global Health Insurance Card (GHIC) – find out more about the GHIC on the Staysure website. Anyone with kidney disease should declare it as a pre-existing medical condition on standard insurance application forms. It may exclude you from some policies.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-holidays-and-insurance-060",
+      "word_count": 243
+    },
+    {
+      "page_title": "Chronic kidney disease - Living with",
+      "section_title": "Want to know more?",
+      "content": "Kidney Care UK: Travel insurance",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/living-with/",
+      "chunk_id": "nhs-kidney-disease-living-with-want-to-know-more-061",
+      "word_count": 5
+    },
+    {
+      "page_title": "Chronic kidney disease - Prevention",
+      "section_title": "Chronic kidney disease - Prevention — Overview",
+      "content": "Chronic kidney disease (CKD) cannot always be prevented, but you can take steps to reduce the chances of getting the condition.Following the advice below can reduce your risk. Manage underlying conditions If you have a long-term condition that could lead to CKD, such as diabetes or high blood pressure, it's important this is managed carefully.Follow the advice of your GP, take any medicine you're prescribed and keep all appointments relating to your condition. Stop smoking Smoking increases your risk of cardiovascular disease, including heart attacks or strokes, which is associated with a higher risk of CKD.Stopping smoking will improve your general health and reduce your risk of these serious conditions.The NHS Smokefree helpline can offer you advice and encouragement to help you quit smoking. Call 0300 123 1044 or visit the Better Health website. Healthy diet A healthy, balanced diet can reduce your risk of kidney disease by keeping your blood pressure and cholesterol at a healthy level.A balanced diet should include:plenty of fruit and vegetables – aim for at least 5 portions a daymeals that include starchy foods, such as potatoes, wholegrain bread, rice or pastasome dairy or dairy alternativessome beans or pulses, fish, eggs, or meat as a source of proteinlow levels of saturated fat, salt and sugarYou may also be given advice about dietary changes that can specifically help with kidney disease, such as limiting the amount of potassium or phosphate in your diet. Manage alcohol intake Drinking excessive amounts of alcohol can cause your blood pressure and cholesterol levels to rise to unhealthy levels.Sticking to the recommended alcohol limit is the best way to reduce your risk:men and women are advised not to regularly drink more than 14 units a weekspread your drinking over 3 days or more if you drink as much as 14 units a week14 units is equivalent to 6 pints of average-strength beer or 10 small glasses of low-strength wine.Find out more about alcohol units. Exercise regularly Regular exercise should help lower your blood pressure and reduce your risk of developing kidney disease.At least 150 minutes (2 hours and 30 minutes) of moderate-intensity aerobic activity, such as cycling or fast walking, every week is recommended, as well as strength exercises on 2 or more days a week that work all the major muscles (legs, hips, back, abdomen, chest, shoulders and arms).Find out more about exercise Be careful with painkillers Kidney disease can be caused by taking too many non-steroidal anti-inflammatories (NSAIDs), such as aspirin and ibuprofen, or taking them for longer than recommended.If you need to take painkillers, make sure you follow the instructions that come with the medicine. Page last reviewed: 22 March 2023 Next review due: 22 March 2026 Previous : Living with",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/prevention/",
+      "chunk_id": "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062",
+      "word_count": 453
+    },
+    {
+      "page_title": "Chronic kidney disease - Prevention",
+      "section_title": "Manage underlying conditions",
+      "content": "If you have a long-term condition that could lead to CKD, such as diabetes or high blood pressure, it's important this is managed carefully. Follow the advice of your GP, take any medicine you're prescribed and keep all appointments relating to your condition.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/prevention/",
+      "chunk_id": "nhs-kidney-disease-prevention-manage-underlying-conditions-063",
+      "word_count": 43
+    },
+    {
+      "page_title": "Chronic kidney disease - Prevention",
+      "section_title": "Stop smoking",
+      "content": "Smoking increases your risk of cardiovascular disease, including heart attacks or strokes, which is associated with a higher risk of CKD. Stopping smoking will improve your general health and reduce your risk of these serious conditions. The NHS Smokefree helpline can offer you advice and encouragement to help you quit smoking. Call 0300 123 1044 or visit the Better Health website.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/prevention/",
+      "chunk_id": "nhs-kidney-disease-prevention-stop-smoking-064",
+      "word_count": 61
+    },
+    {
+      "page_title": "Chronic kidney disease - Prevention",
+      "section_title": "Healthy diet",
+      "content": "A healthy, balanced diet can reduce your risk of kidney disease by keeping your blood pressure and cholesterol at a healthy level. A balanced diet should include: plenty of fruit and vegetables – aim for at least 5 portions a daymeals that include starchy foods, such as potatoes, wholegrain bread, rice or pastasome dairy or dairy alternativessome beans or pulses, fish, eggs, or meat as a source of proteinlow levels of saturated fat, salt and sugar You may also be given advice about dietary changes that can specifically help with kidney disease, such as limiting the amount of potassium or phosphate in your diet.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/prevention/",
+      "chunk_id": "nhs-kidney-disease-prevention-healthy-diet-065",
+      "word_count": 104
+    },
+    {
+      "page_title": "Chronic kidney disease - Prevention",
+      "section_title": "Manage alcohol intake",
+      "content": "Drinking excessive amounts of alcohol can cause your blood pressure and cholesterol levels to rise to unhealthy levels. Sticking to the recommended alcohol limit is the best way to reduce your risk: men and women are advised not to regularly drink more than 14 units a weekspread your drinking over 3 days or more if you drink as much as 14 units a week 14 units is equivalent to 6 pints of average-strength beer or 10 small glasses of low-strength wine. Find out more about alcohol units.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/prevention/",
+      "chunk_id": "nhs-kidney-disease-prevention-manage-alcohol-intake-066",
+      "word_count": 87
+    },
+    {
+      "page_title": "Chronic kidney disease - Prevention",
+      "section_title": "Exercise regularly",
+      "content": "Regular exercise should help lower your blood pressure and reduce your risk of developing kidney disease. At least 150 minutes (2 hours and 30 minutes) of moderate-intensity aerobic activity, such as cycling or fast walking, every week is recommended, as well as strength exercises on 2 or more days a week that work all the major muscles (legs, hips, back, abdomen, chest, shoulders and arms). Find out more about exercise",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/prevention/",
+      "chunk_id": "nhs-kidney-disease-prevention-exercise-regularly-067",
+      "word_count": 70
+    },
+    {
+      "page_title": "Chronic kidney disease - Prevention",
+      "section_title": "Be careful with painkillers",
+      "content": "Kidney disease can be caused by taking too many non-steroidal anti-inflammatories (NSAIDs), such as aspirin and ibuprofen, or taking them for longer than recommended. If you need to take painkillers, make sure you follow the instructions that come with the medicine.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-disease/prevention/",
+      "chunk_id": "nhs-kidney-disease-prevention-be-careful-with-painkillers-068",
+      "word_count": 41
+    },
+    {
+      "page_title": "Dialysis",
+      "section_title": "Dialysis",
+      "content": "What it is Why it is done How it is done Complications Help and support",
+      "source_url": "https://www.nhs.uk/conditions/dialysis/",
+      "chunk_id": "nhs-dialysis-dialysis-069",
+      "word_count": 15
+    },
+    {
+      "page_title": "Kidney stones",
+      "section_title": "Kidney stones — Overview",
+      "content": "Kidney stones can develop in 1 or both kidneys and most often affect people aged 30 to 60.They're quite common, with more than 1 in 10 people affected.Kidney stones are usually found in the kidneys or in the ureter, the tube that connects the kidneys to your bladder.They can be extremely painful, and can lead to kidney infections or the kidney not working properly if left untreated. Symptoms of kidney stonesYou may not notice if you have small kidney stones. You'll usually pee them out without any discomfort.Larger kidney stones can cause several symptoms, including:pain in the side of your tummy (abdomen)severe pain that comes and goesfeeling sick or vomitingFind out more about the symptoms of kidney stones When to get urgent medical helpYou should contact a GP or NHS 111 immediately if:you're in severe painyou have a high temperature, or you feel hot, cold or shiveryyou have blood in your urine What causes kidney stones?Waste products in the blood can occasionally form crystals that collect inside the kidneys.Over time, the crystals may build up to form a hard stone-like lump.This is more likely to happen if you:do not drink enough fluidsare taking some types of medicationhave a medical condition that raises the levels of certain substances in your urineFind out more about the causes of kidney stonesAfter a kidney stone has formed, your body will try to pass it out when you pee. Treating and preventing kidney stonesMost kidney stones are small enough to be passed in your pee, and it may be possible to treat the symptoms at home with medication.Larger stones may need to be broken up or removed with surgery.Find out more about treating kidney stonesIt's estimated up to half of all people who have had kidney stones will experience them again within the following 5 years.To avoid getting kidney stones, make sure you drink plenty of water every day so you do not become dehydrated.It's very important to keep your urine pale in colour to prevent waste products forming into kidney stones.Find out more about preventing kidney stones The kidneysThe kidneys are 2 bean-shaped organs that are roughly 10cm (4 inches) in length.They're located towards the back of the abdomen on either side of the spine.The kidneys remove waste products from the blood. The clean blood is then transferred back into the body and the waste products are passed out of the body when you pee. Video: what are kidney stones? This animation explains how kidneys function, how to prevent kidney stones and the treatment options. Media last reviewed: 1 April 2024 Media review due: 1 April 2027 Page last reviewed: 30 November 2022 Next review due: 30 November 2025 Next : Symptoms",
+      "source_url": "https://www.nhs.uk/conditions/kidney-stones/",
+      "chunk_id": "nhs-kidney-stones-kidney-stones-overview-070",
+      "word_count": 448
+    },
+    {
+      "page_title": "Kidney stones",
+      "section_title": "Symptoms of kidney stones",
+      "content": "You may not notice if you have small kidney stones. You'll usually pee them out without any discomfort. Larger kidney stones can cause several symptoms, including: pain in the side of your tummy (abdomen)severe pain that comes and goesfeeling sick or vomiting Find out more about the symptoms of kidney stones",
+      "source_url": "https://www.nhs.uk/conditions/kidney-stones/",
+      "chunk_id": "nhs-kidney-stones-symptoms-of-kidney-stones-071",
+      "word_count": 51
+    },
+    {
+      "page_title": "Kidney stones",
+      "section_title": "When to get urgent medical help",
+      "content": "You should contact a GP or NHS 111 immediately if: you're in severe painyou have a high temperature, or you feel hot, cold or shiveryyou have blood in your urine",
+      "source_url": "https://www.nhs.uk/conditions/kidney-stones/",
+      "chunk_id": "nhs-kidney-stones-when-to-get-urgent-medical-help-072",
+      "word_count": 30
+    },
+    {
+      "page_title": "Kidney stones",
+      "section_title": "What causes kidney stones?",
+      "content": "Waste products in the blood can occasionally form crystals that collect inside the kidneys. Over time, the crystals may build up to form a hard stone-like lump. This is more likely to happen if you: do not drink enough fluidsare taking some types of medicationhave a medical condition that raises the levels of certain substances in your urine Find out more about the causes of kidney stones After a kidney stone has formed, your body will try to pass it out when you pee.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-stones/",
+      "chunk_id": "nhs-kidney-stones-what-causes-kidney-stones-073",
+      "word_count": 84
+    },
+    {
+      "page_title": "Kidney stones",
+      "section_title": "Treating and preventing kidney stones",
+      "content": "Most kidney stones are small enough to be passed in your pee, and it may be possible to treat the symptoms at home with medication. Larger stones may need to be broken up or removed with surgery. Find out more about treating kidney stones It's estimated up to half of all people who have had kidney stones will experience them again within the following 5 years. To avoid getting kidney stones, make sure you drink plenty of water every day so you do not become dehydrated. It's very important to keep your urine pale in colour to prevent waste products forming into kidney stones. Find out more about preventing kidney stones",
+      "source_url": "https://www.nhs.uk/conditions/kidney-stones/",
+      "chunk_id": "nhs-kidney-stones-treating-and-preventing-kidney-stones-074",
+      "word_count": 111
+    },
+    {
+      "page_title": "Kidney stones",
+      "section_title": "The kidneys",
+      "content": "The kidneys are 2 bean-shaped organs that are roughly 10cm (4 inches) in length. They're located towards the back of the abdomen on either side of the spine. The kidneys remove waste products from the blood. The clean blood is then transferred back into the body and the waste products are passed out of the body when you pee.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-stones/",
+      "chunk_id": "nhs-kidney-stones-the-kidneys-075",
+      "word_count": 59
+    },
+    {
+      "page_title": "Kidney stones",
+      "section_title": "Video: what are kidney stones?",
+      "content": "This animation explains how kidneys function, how to prevent kidney stones and the treatment options.",
+      "source_url": "https://www.nhs.uk/conditions/kidney-stones/",
+      "chunk_id": "nhs-kidney-stones-video-what-are-kidney-stones-076",
+      "word_count": 15
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "Acute kidney injury (AKI) — Overview",
+      "content": "Causes of acute kidney injury Lots of things can cause acute kidney injury (AKI). The problem may be in your kidneys or somewhere else in your body.Possible causes include:infections or sepsisdehydration, low blood pressure or blood lossconditions that can cause swelling or a blockage, like kidney stones, an inflamed prostate (prostatitis), tumours or inflamed blood vessels (vasculitis)long-term conditions that affect your kidneys, heart or liverlong-term use of some medicines, such as ACE inhibitors, anti-inflammatory medicines (NSAIDs) or medicines that make you pee more (diuretics)the dye (contrast) sometimes injected as part scans, such as a CT scan or coronary angiographyAnyone can get AKI, but it's more common if you:are aged 65 or olderhave had AKI beforehave recently had surgerytake illegal drugs Symptoms of acute kidney injury Many people do not get symptoms of acute kidney injury (AKI), especially if it's mild.If you do get symptoms, they may include:peeing a lot less than usualfeeling very thirstyfeeling sick (nausea) or being sick (vomiting)swollen feet or legsfeeling tired, dizzy, confused or sleepyfeeling breathless, especially when you lie down Urgent advice: Ask from an urgent GP appointment or get help from NHS 111 if: you think you may have symptoms of acute kidney injury (AKI)You can get help from 111 online or call 111. How acute kidney injury is diagnosed Acute kidney injury (AKI) is diagnosed using a blood test. Your blood will be checked for levels of creatinine, a waste product made by your muscles and removed by your kidneys.If you have higher levels of creatinine than usual, it means your kidneys are not working as well as they should.If a doctor thinks you have AKI, they may also:ask you to give a sample of pee (urine sample)ask how often you've been peeingcheck your pulse and blood pressureDepending on what they think may be causing your symptoms, you may also have other tests, including:an ECG (electrocardiogram)scans such as an X-ray, CT scan or ultrasoundIf your AKI is severe or they're not sure what's causing it, you may be referred to a kidney specialist (nephrologist) or admitted to hospital.AKI is often diagnosed if you're having tests or have been admitted to hospital for another reason. Treatment for acute kidney injury Treatment for acute kidney injury (AKI) depends on how bad it is and what's causing it. You may need treatment in hospital.Treatment may include:medicine – this could be to treat an infection, raise your blood pressure, reduce swelling or calm your immune systemstopping or changing any medicine that could be causing damage to your kidneysfluids given into your vein through a drip (IV)a thin, flexible tube (catheter) being put into your bladder to drain urinesurgery to remove a blockage in your kidneys or bladderIf your AKI is severe, your kidneys may need help to do their job of cleaning your blood, which can be done using a machine during dialysis.This is usually just for a few days or weeks until your kidneys recover. Complications of acute kidney injury Acute kidney injury (AKI) is a serious condition and can be life-threatening if not treated, but many people recover fully within a few weeks with no long-term effects.If your AKI is more serious, it can take several months to recover.You'll have regular blood tests and check-ups after you've recovered to make sure your kidneys are working as expected.Some people who have had AKI end up with permanent damage to their kidneys, causing chronic kidney disease.You're more likely to get chronic kidney disease if your AKI is severe or you already have other long-term health problems.Chronic kidney disease is a lifelong condition that increases your risk of cardiovascular disease, such as a heart attack or stroke, and may mean you'll need regular dialysis. But it can often be managed through lifestyle changes. How to lower your chances of acute kidney injury if you're at higher risk If you've had acute kidney injury (AKI) before or you're at higher risk of getting it because of your age or medication you take, there are some things you can do to lower your chances of getting it. Do stay hydrated – drink enough fluids so you pee is pale and regular throughout the day, especially during hot weather, or if you're being sick (vomiting) or have diarrhoea speak to a doctor before taking any new medicines or supplements make sure you know the symptoms of acute kidney injury to watch out for and when to get medical help – ask a doctor if you're unsure about any warning signs Page last reviewed: 11 March 2026 Next review due: 11 March 2029",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-acute-kidney-injury-aki-overview-077",
+      "word_count": 760
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "Causes of acute kidney injury",
+      "content": "Lots of things can cause acute kidney injury (AKI). The problem may be in your kidneys or somewhere else in your body. Possible causes include: infections or sepsisdehydration, low blood pressure or blood lossconditions that can cause swelling or a blockage, like kidney stones, an inflamed prostate (prostatitis), tumours or inflamed blood vessels (vasculitis)long-term conditions that affect your kidneys, heart or liverlong-term use of some medicines, such as ACE inhibitors, anti-inflammatory medicines (NSAIDs) or medicines that make you pee more (diuretics)the dye (contrast) sometimes injected as part scans, such as a CT scan or coronary angiography Anyone can get AKI, but it's more common if you: are aged 65 or olderhave had AKI beforehave recently had surgerytake illegal drugs",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-causes-of-acute-kidney-injury-078",
+      "word_count": 119
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "Symptoms of acute kidney injury",
+      "content": "Many people do not get symptoms of acute kidney injury (AKI), especially if it's mild. If you do get symptoms, they may include: peeing a lot less than usualfeeling very thirstyfeeling sick (nausea) or being sick (vomiting)swollen feet or legsfeeling tired, dizzy, confused or sleepyfeeling breathless, especially when you lie down",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-symptoms-of-acute-kidney-injury-079",
+      "word_count": 51
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "How acute kidney injury is diagnosed",
+      "content": "Acute kidney injury (AKI) is diagnosed using a blood test. Your blood will be checked for levels of creatinine, a waste product made by your muscles and removed by your kidneys. If you have higher levels of creatinine than usual, it means your kidneys are not working as well as they should. If a doctor thinks you have AKI, they may also: ask you to give a sample of pee (urine sample)ask how often you've been peeingcheck your pulse and blood pressure Depending on what they think may be causing your symptoms, you may also have other tests, including: an ECG (electrocardiogram)scans such as an X-ray, CT scan or ultrasound If your AKI is severe or they're not sure what's causing it, you may be referred to a kidney specialist (nephrologist) or admitted to hospital. AKI is often diagnosed if you're having tests or have been admitted to hospital for another reason.",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-how-acute-kidney-injury-is-diagnosed-080",
+      "word_count": 152
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "Treatment for acute kidney injury",
+      "content": "Treatment for acute kidney injury (AKI) depends on how bad it is and what's causing it. You may need treatment in hospital. Treatment may include: medicine – this could be to treat an infection, raise your blood pressure, reduce swelling or calm your immune systemstopping or changing any medicine that could be causing damage to your kidneysfluids given into your vein through a drip (IV)a thin, flexible tube (catheter) being put into your bladder to drain urinesurgery to remove a blockage in your kidneys or bladder If your AKI is severe, your kidneys may need help to do their job of cleaning your blood, which can be done using a machine during dialysis. This is usually just for a few days or weeks until your kidneys recover.",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-treatment-for-acute-kidney-injury-081",
+      "word_count": 127
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "Complications of acute kidney injury",
+      "content": "Acute kidney injury (AKI) is a serious condition and can be life-threatening if not treated, but many people recover fully within a few weeks with no long-term effects. If your AKI is more serious, it can take several months to recover. You'll have regular blood tests and check-ups after you've recovered to make sure your kidneys are working as expected. Some people who have had AKI end up with permanent damage to their kidneys, causing chronic kidney disease. You're more likely to get chronic kidney disease if your AKI is severe or you already have other long-term health problems. Chronic kidney disease is a lifelong condition that increases your risk of cardiovascular disease, such as a heart attack or stroke, and may mean you'll need regular dialysis. But it can often be managed through lifestyle changes.",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-complications-of-acute-kidney-injury-082",
+      "word_count": 136
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "How to lower your chances of acute kidney injury if you're at higher risk",
+      "content": "If you've had acute kidney injury (AKI) before or you're at higher risk of getting it because of your age or medication you take, there are some things you can do to lower your chances of getting it. Do stay hydrated – drink enough fluids so you pee is pale and regular throughout the day, especially during hot weather, or if you're being sick (vomiting) or have diarrhoea speak to a doctor before taking any new medicines or supplements make sure you know the symptoms of acute kidney injury to watch out for and when to get medical help – ask a doctor if you're unsure about any warning signs",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-how-to-lower-your-chances-of-acute-kidne-083",
+      "word_count": 110
+    },
+    {
+      "page_title": "Acute kidney injury (AKI)",
+      "section_title": "Do",
+      "content": "stay hydrated – drink enough fluids so you pee is pale and regular throughout the day, especially during hot weather, or if you're being sick (vomiting) or have diarrhoea speak to a doctor before taking any new medicines or supplements make sure you know the symptoms of acute kidney injury to watch out for and when to get medical help – ask a doctor if you're unsure about any warning signs",
+      "source_url": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "chunk_id": "nhs-acute-kidney-injury-do-084",
+      "word_count": 71
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "name": "CKD Chatbot Gold-Standard Evaluation Set",
+    "version": "1.0",
+    "description": "Manually curated test set for evaluating retrieval quality of the NHS CKD chatbot RAG pipeline. Each question is annotated with the chunk IDs that should ideally be retrieved from the FAISS index to correctly answer it. Used to compute Recall@k, Mean Reciprocal Rank (MRR), and Precision@k.",
+    "total_questions": 30,
+    "categories": {
+      "symptoms": 4,
+      "diagnosis": 4,
+      "treatment": 5,
+      "prevention": 4,
+      "lifestyle": 4,
+      "causes": 3,
+      "out_of_scope": 6
+    },
+    "query_types": {
+      "direct": 13,
+      "colloquial": 6,
+      "out_of_scope": 6,
+      "follow_up": 5
+    },
+    "notes": "Out-of-scope questions intentionally test the MIN_SCORE threshold — they should return NO relevant chunks and trigger the fallback response. Follow-up questions include a 'history' field to test contextualised retrieval."
+  },
+
+  "questions": [
+    {
+      "id": "q01",
+      "category": "symptoms",
+      "query_type": "direct",
+      "question": "What are the symptoms of chronic kidney disease?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011",
+        "nhs-kidney-disease-symptoms-of-ckd-002"
+      ]
+    },
+    {
+      "id": "q02",
+      "category": "symptoms",
+      "query_type": "direct",
+      "question": "What symptoms appear in the later stages of CKD?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-later-stages-of-ckd-011"
+      ]
+    },
+    {
+      "id": "q03",
+      "category": "symptoms",
+      "query_type": "colloquial",
+      "question": "how would I even know if my kidneys are in trouble?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009",
+        "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+        "nhs-kidney-disease-symptoms-when-to-get-medical-advice-012"
+      ]
+    },
+    {
+      "id": "q04",
+      "category": "symptoms",
+      "query_type": "follow_up",
+      "question": "what about the early stages?",
+      "history": [
+        {"role": "user", "text": "What symptoms do people with CKD get?"},
+        {"role": "bot", "text": "CKD has several symptoms depending on the stage of the disease."}
+      ],
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-symptoms-early-stages-of-ckd-010",
+        "nhs-kidney-disease-symptoms-chronic-kidney-disease-symptoms-overview-009"
+      ]
+    },
+
+    {
+      "id": "q05",
+      "category": "diagnosis",
+      "query_type": "direct",
+      "question": "How is chronic kidney disease diagnosed?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-chronic-kidney-disease-diagnosis-overvie-013-p1",
+        "nhs-kidney-disease-diagnosis-blood-test-015",
+        "nhs-kidney-disease-diagnosis-urine-test-016"
+      ]
+    },
+    {
+      "id": "q06",
+      "category": "diagnosis",
+      "query_type": "direct",
+      "question": "What are the stages of CKD?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-test-results-and-stages-of-ckd-019"
+      ]
+    },
+    {
+      "id": "q07",
+      "category": "diagnosis",
+      "query_type": "colloquial",
+      "question": "what test do they run for kidney problems?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-blood-test-015",
+        "nhs-kidney-disease-diagnosis-urine-test-016",
+        "nhs-kidney-disease-tests-for-ckd-004"
+      ]
+    },
+    {
+      "id": "q08",
+      "category": "diagnosis",
+      "query_type": "follow_up",
+      "question": "and the urine one?",
+      "history": [
+        {"role": "user", "text": "Tell me about the blood test for CKD"},
+        {"role": "bot", "text": "The main blood test measures creatinine levels and calculates your estimated glomerular filtration rate (eGFR)."}
+      ],
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-diagnosis-urine-test-016"
+      ]
+    },
+
+    {
+      "id": "q09",
+      "category": "treatment",
+      "query_type": "direct",
+      "question": "What are the treatments for chronic kidney disease?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-treatments-for-ckd-005"
+      ]
+    },
+    {
+      "id": "q10",
+      "category": "treatment",
+      "query_type": "direct",
+      "question": "What is dialysis for kidney disease?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-dialysis-033"
+      ]
+    },
+    {
+      "id": "q11",
+      "category": "treatment",
+      "query_type": "direct",
+      "question": "What medicines are used to treat high blood pressure in CKD?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-high-blood-pressure-025",
+        "nhs-kidney-disease-treatment-medicine-023"
+      ]
+    },
+    {
+      "id": "q12",
+      "category": "treatment",
+      "query_type": "colloquial",
+      "question": "can CKD be cured?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-chronic-kidney-disease-treatment-overvie-021-p1",
+        "nhs-kidney-disease-treatments-for-ckd-005"
+      ]
+    },
+    {
+      "id": "q13",
+      "category": "treatment",
+      "query_type": "follow_up",
+      "question": "tell me more about transplants",
+      "history": [
+        {"role": "user", "text": "What options are there for severe CKD?"},
+        {"role": "bot", "text": "For severe CKD, options include dialysis, kidney transplant, and supportive treatment."}
+      ],
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-treatment-kidney-transplant-035"
+      ]
+    },
+
+    {
+      "id": "q14",
+      "category": "prevention",
+      "query_type": "direct",
+      "question": "How can I prevent chronic kidney disease?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-chronic-kidney-disease-prevention-overvi-062-p1",
+        "nhs-kidney-disease-prevention-manage-underlying-conditions-063"
+      ]
+    },
+    {
+      "id": "q15",
+      "category": "prevention",
+      "query_type": "direct",
+      "question": "Does smoking cause kidney problems?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-stop-smoking-064"
+      ]
+    },
+    {
+      "id": "q16",
+      "category": "prevention",
+      "query_type": "colloquial",
+      "question": "are painkillers bad for your kidneys?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-be-careful-with-painkillers-068"
+      ]
+    },
+    {
+      "id": "q17",
+      "category": "prevention",
+      "query_type": "follow_up",
+      "question": "what about diet and exercise?",
+      "history": [
+        {"role": "user", "text": "What lifestyle changes help prevent CKD?"},
+        {"role": "bot", "text": "Several lifestyle changes can reduce your risk of developing CKD."}
+      ],
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-prevention-healthy-diet-065",
+        "nhs-kidney-disease-prevention-exercise-regularly-067"
+      ]
+    },
+
+    {
+      "id": "q18",
+      "category": "lifestyle",
+      "query_type": "direct",
+      "question": "Can I exercise if I have kidney disease?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-exercise-regularly-044"
+      ]
+    },
+    {
+      "id": "q19",
+      "category": "lifestyle",
+      "query_type": "direct",
+      "question": "Can I drink alcohol with CKD?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-limit-your-alcohol-consumption-047"
+      ]
+    },
+    {
+      "id": "q20",
+      "category": "lifestyle",
+      "query_type": "direct",
+      "question": "Is pregnancy safe for women with kidney disease?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-pregnancy-055"
+      ]
+    },
+    {
+      "id": "q21",
+      "category": "lifestyle",
+      "query_type": "colloquial",
+      "question": "can I still go to work if I have CKD?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-living-with-can-i-continue-working-057",
+        "nhs-kidney-disease-living-with-what-happens-if-i-can-no-longer-work-058"
+      ]
+    },
+
+    {
+      "id": "q22",
+      "category": "causes",
+      "query_type": "direct",
+      "question": "What causes chronic kidney disease?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-causes-of-ckd-003"
+      ]
+    },
+    {
+      "id": "q23",
+      "category": "causes",
+      "query_type": "direct",
+      "question": "What causes kidney stones?",
+      "expected_chunk_ids": [
+        "nhs-kidney-stones-what-causes-kidney-stones-073"
+      ]
+    },
+    {
+      "id": "q24",
+      "category": "causes",
+      "query_type": "colloquial",
+      "question": "does diabetes mess up your kidneys?",
+      "expected_chunk_ids": [
+        "nhs-kidney-disease-causes-of-ckd-003",
+        "nhs-kidney-disease-prevention-manage-underlying-conditions-063"
+      ]
+    },
+
+    {
+      "id": "q25",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "question": "What is the best football team in England?",
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q26",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "question": "How do I cook a lasagna?",
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q27",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "question": "What's the weather like in London tomorrow?",
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q28",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "question": "My car won't start, what should I do?",
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q29",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "question": "What's the capital of Australia?",
+      "expected_chunk_ids": []
+    },
+    {
+      "id": "q30",
+      "category": "out_of_scope",
+      "query_type": "out_of_scope",
+      "question": "Can you write me a poem about love?",
+      "expected_chunk_ids": []
+    }
+  ]
+}
