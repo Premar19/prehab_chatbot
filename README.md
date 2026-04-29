@@ -96,4 +96,4 @@ The test suite covers input validation, the greeting shortcut, off-topic fallbac
 
 ## Context
 
-This repository contains the chatbot subsystem of an undergraduate dissertation project at Aberystwyth University. The wider clinical companion app (exercise tracking, mental wellbeing assessment, clinician–patient messaging) is maintained in a separate repository.
+This repository contains the chatbot subsystem of the dissertation project at Aberystwyth University. The wider clinical companion app (exercise tracking, mental wellbeing assessment, clinician–patient messaging) is maintained in a separate repository which has been submitted as a seperate folder in the zip file.
