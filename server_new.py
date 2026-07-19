@@ -12,6 +12,7 @@ Requires: Ollama running with llama3.1:8b loaded
 """
 
 import json
+import re  # NEW
 import numpy as np
 import faiss
 import requests
@@ -36,6 +37,30 @@ chunks = None
 embed_model = None
 
 
+# ── NEW: Text normalisation ────────────────────────────────────
+def normalize_text(text: str) -> str:
+    text = text.lower().strip()
+    text = re.sub(r"[!?.]+$", "", text)
+    text = re.sub(r"(.)\1{2,}", r"\1", text)
+    return text
+
+
+# ── NEW: Expanded intent sets ──────────────────────────────────
+GREETINGS = {
+    "hi", "hello", "hey", "good morning", "good afternoon", "good evening",
+    "hiya", "howdy", "heya",
+    "helo", "hii", "heyy"
+}
+
+FILLERS = {
+    "ok", "okay", "kk", "k",
+    "cool", "alright", "right",
+    "thanks", "thank you", "thx", "ty",
+    "yes", "yeah", "yep", "yup",
+    "no", "nope"
+}
+
+
 # ── Lifespan: load models on startup ───────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -57,14 +82,12 @@ async def lifespan(app: FastAPI):
 
     yield  # app runs here
 
-    # Cleanup on shutdown (nothing needed for now)
     print("Shutting down server...")
 
 
 # ── FastAPI app ────────────────────────────────────────────────
 app = FastAPI(title="CKD Chatbot API", lifespan=lifespan)
 
-# Allow React frontend to call this API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -79,13 +102,13 @@ from typing import List
 
 # ── Request/Response models ────────────────────────────────────
 class HistoryMessage(BaseModel):
-    role: str  # "user" or "bot"
+    role: str
     text: str
 
 
 class ChatRequest(BaseModel):
     message: str
-    history: List[HistoryMessage] = []  # Previous messages in conversation
+    history: List[HistoryMessage] = []
 
 
 class ChatResponse(BaseModel):
@@ -96,7 +119,6 @@ class ChatResponse(BaseModel):
 
 # ── Core functions ─────────────────────────────────────────────
 def search_faiss(query: str):
-    """Search FAISS index and return relevant chunks above threshold."""
     query_vector = embed_model.encode(
         [query],
         convert_to_numpy=True,
@@ -114,7 +136,6 @@ def search_faiss(query: str):
 
 
 def build_prompt(query: str, retrieved_chunks, history: List["HistoryMessage"] = None):
-    """Build the prompt with retrieved context and conversation history for Llama."""
     context_parts = []
 
     for chunk, score in retrieved_chunks:
@@ -125,10 +146,8 @@ def build_prompt(query: str, retrieved_chunks, history: List["HistoryMessage"] =
 
     context = "\n\n---\n\n".join(context_parts)
 
-    # Build conversation history string (last few exchanges for context)
     history_text = ""
     if history:
-        # Take last 6 messages (3 exchanges) to keep prompt manageable
         recent = history[-6:]
         history_lines = []
         for msg in recent:
@@ -163,7 +182,6 @@ Answer:"""
 
 
 def ask_ollama(prompt: str) -> str:
-    """Send prompt to Ollama and return the response."""
     try:
         response = requests.post(
             OLLAMA_URL,
@@ -200,35 +218,29 @@ def chat(req: ChatRequest):
     if not query:
         raise HTTPException(status_code=400, detail="Message cannot be empty.")
 
-    # Handle greetings without calling FAISS or the LLM
-    greetings = {"hi", "hello", "hey", "good morning", "good afternoon", "good evening", "hiya", "howdy","heya"}
-    if query.lower().strip("!., ") in greetings:
+    # ── NEW: Normalised intent handling ────────────────────────
+    normalized = normalize_text(query)
+
+    if normalized in GREETINGS:
         return ChatResponse(
             answer="Hello! I'm a CKD assistant powered by NHS guidance. You can ask me about chronic kidney disease — symptoms, diagnosis, treatment, prevention, or living with the condition. How can I help?",
             sources=[],
             retrieved_chunks=[],
         )
 
-    # Step 1: Search FAISS
-    # For follow-up questions, we expand the search query with the
-    # user's previous messages from this conversation. This preserves
-    # the conversation topic across multiple turns. Without this,
-    # short follow-ups like "tell me more" or affirmations like "yes"
-    # would fall below the relevance threshold and trigger the
-    # off-topic fallback.
-    #
-    # Strategy: concatenate recent user messages with the current
-    # query, then REPEAT the current query to give its terms more
-    # weight in the resulting embedding (term repetition weighting).
-    # This keeps the conversation topic alive while ensuring the
-    # latest intent dominates retrieval.
+    if normalized in FILLERS and req.history:
+        return ChatResponse(
+            answer="No problem — feel free to ask any questions about chronic kidney disease whenever you're ready.",
+            sources=[],
+            retrieved_chunks=[],
+        )
+
+    # ── ORIGINAL LOGIC CONTINUES UNCHANGED ─────────────────────
     search_query = query
     if req.history:
         previous_user_msgs = [m.text for m in req.history if m.role == "user"]
         if previous_user_msgs:
             recent_context = " ".join(previous_user_msgs[-3:])
-            # Current query repeated twice weights it more heavily
-            # than the historical context in the embedding space
             search_query = f"{recent_context} {query} {query}"
 
     results = search_faiss(search_query)
@@ -240,13 +252,9 @@ def chat(req: ChatRequest):
             retrieved_chunks=[],
         )
 
-    # Step 2: Build prompt with conversation history
     prompt = build_prompt(query, results, req.history)
-
-    # Step 3: Get response from Llama
     answer = ask_ollama(prompt)
 
-    # Step 4: Build source list (deduplicated)
     seen_urls = set()
     sources = []
     for chunk, score in results:
@@ -258,7 +266,6 @@ def chat(req: ChatRequest):
                 "url": url,
             })
 
-    # Step 5: Build retrieved chunks info (useful for frontend debugging)
     retrieved_info = [
         {
             "section_title": chunk["section_title"],
@@ -273,66 +280,3 @@ def chat(req: ChatRequest):
         sources=sources,
         retrieved_chunks=retrieved_info,
     )
-
-# ── Ablation endpoint (no RAG) ─────────────────────────────────
-def build_prompt_no_rag(query: str, history: List["HistoryMessage"] = None):
-    """Build a prompt with NO retrieved context (ablation study)."""
-    history_text = ""
-    if history:
-        recent = history[-6:]
-        history_lines = []
-        for msg in recent:
-            role_label = "Patient" if msg.role == "user" else "Assistant"
-            history_lines.append(f"{role_label}: {msg.text}")
-        history_text = "\n".join(history_lines)
-
-    prompt = f"""You are an NHS educational assistant helping patients understand chronic kidney disease (CKD).
-
-RULES:
-- Your response will be shown directly to a patient.
-- Provide general educational information ONLY.
-- Do NOT give personalised medical advice.
-- Do NOT tell the patient what they should do — use phrases like "patients are generally advised to" or "NHS guidance suggests".
-- Use simple, clear language suitable for a general audience.
-- Consider the previous conversation when answering follow-up questions.
-
-Previous Conversation:
-{history_text if history_text else "(No previous messages)"}
-
-Patient Question:
-{query}
-
-Answer:"""
-    return prompt
-
-
-@app.post("/chat-no-rag", response_model=ChatResponse)
-def chat_no_rag(req: ChatRequest):
-    """Ablation endpoint: same model, same prompt structure, no retrieval."""
-    query = req.message.strip()
-
-    if not query:
-        raise HTTPException(status_code=400, detail="Message cannot be empty.")
-
-    # Build prompt WITHOUT retrieved context
-    prompt = build_prompt_no_rag(query, req.history)
-
-    # Same LLM call as the RAG version
-    answer = ask_ollama(prompt)
-
-    return ChatResponse(
-        answer=answer,
-        sources=[],
-        retrieved_chunks=[],
-    )
-
-# ── Health check endpoint ──────────────────────────────────────
-@app.get("/health")
-def health():
-    return {
-        "status": "ok",
-        "index_loaded": faiss_index is not None,
-        "chunks_loaded": chunks is not None,
-        "model_loaded": embed_model is not None,
-        "total_chunks": len(chunks) if chunks else 0,
-    }
