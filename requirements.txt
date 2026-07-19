@@ -5,3 +5,8 @@ sentence-transformers
 supabase
 openai
 python-dotenv
+faiss-cpu
+langchain-core
+langchain-groq
+langchain-ollama
+langchain-huggingface
