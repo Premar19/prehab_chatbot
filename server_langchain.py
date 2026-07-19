@@ -337,3 +337,11 @@ def health():
         "retriever": type(_STATE.get("retriever")).__name__ if _STATE.get("retriever") else None,
         "llm": type(_STATE.get("llm")).__name__ if _STATE.get("llm") else None,
     }
+
+
+# ── Entry point ────────────────────────────────────────────────
+# Lets `python server_langchain.py` work directly. Without this block the file
+# only defines the app and exits silently — uvicorn is what actually serves it.
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

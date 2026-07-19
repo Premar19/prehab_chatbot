@@ -20,6 +20,7 @@ Setup:
 
 import os
 import re
+import sys
 from contextlib import asynccontextmanager
 from typing import List
 
@@ -32,6 +33,11 @@ from supabase import create_client
 from openai import OpenAI, APIConnectionError, APITimeoutError, RateLimitError
 
 load_dotenv()
+
+# Windows consoles default to cp1252, which cannot encode the ✓/🟢 glyphs in
+# the startup prints below — reconfigure stdout to UTF-8 so startup can't crash.
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # ── Configuration ──────────────────────────────────────────────
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
@@ -313,3 +319,11 @@ def chat(req: ChatRequest):
         sources=sources,
         retrieved_chunks=retrieved_info,
     )
+
+
+# ── Entry point ────────────────────────────────────────────────
+# Lets `python server_groq.py` work directly. Without this block the file
+# only defines the app and exits silently — uvicorn is what actually serves it.
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
