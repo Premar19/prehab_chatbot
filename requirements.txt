@@ -10,3 +10,4 @@ langchain-core
 langchain-groq
 langchain-ollama
 langchain-huggingface
+langgraph

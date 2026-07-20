@@ -185,9 +185,13 @@ def format_history(history: List["HistoryMessage"]) -> str:
 _STATE: dict = {}
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    print(f"Starting in '{MODE}' mode...")
+def load_components(mode: str) -> None:
+    """Populate _STATE with embeddings, retriever, LLM, and chain for a mode.
+
+    Shared by server_langchain (LCEL pipeline) and server_langgraph (graph),
+    so both servers are guaranteed to run the exact same components.
+    """
+    print(f"Starting in '{mode}' mode...")
 
     print(f"Loading embedding model ({EMBEDDING_MODEL})...")
     _STATE["embeddings"] = HuggingFaceEmbeddings(
@@ -195,7 +199,7 @@ async def lifespan(app: FastAPI):
         encode_kwargs={"normalize_embeddings": True},
     )
 
-    if MODE == "local":
+    if mode == "local":
         import faiss
         print("Loading FAISS index...")
         _STATE["faiss_index"] = faiss.read_index(FAISS_INDEX_PATH)
@@ -207,7 +211,7 @@ async def lifespan(app: FastAPI):
         _STATE["llm"] = ChatOllama(
             model=OLLAMA_MODEL, temperature=LLM_TEMPERATURE, num_predict=400
         )
-    elif MODE == "cloud":
+    elif mode == "cloud":
         from supabase import create_client
         url, key = os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_SERVICE_KEY")
         if not url or not key or not os.environ.get("GROQ_API_KEY"):
@@ -221,11 +225,15 @@ async def lifespan(app: FastAPI):
             model=GROQ_MODEL, temperature=LLM_TEMPERATURE, max_tokens=512
         )
     else:
-        raise RuntimeError(f"Unknown CHATBOT_MODE '{MODE}' — use 'local' or 'cloud'")
+        raise RuntimeError(f"Unknown CHATBOT_MODE '{mode}' — use 'local' or 'cloud'")
 
     # The LCEL pipeline: prompt template → chat model → plain string out.
     _STATE["chain"] = PROMPT | _STATE["llm"] | StrOutputParser()
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    load_components(MODE)
     print(f"\nServer ready — LangChain pipeline loaded ({MODE} mode)\n")
     yield
     print("Shutting down server...")
