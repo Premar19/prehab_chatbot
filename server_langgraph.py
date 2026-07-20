@@ -155,10 +155,13 @@ FILLER_ANSWER = (
 )
 
 OUT_OF_SCOPE_ANSWER = (
-    "That question doesn't appear to be related to chronic kidney disease "
-    "(CKD), which is what I'm designed to help with. Feel free to ask me "
-    "anything about CKD symptoms, diagnosis, treatment, prevention, or living "
-    "with the condition."
+    "I'm sorry — I don't have good information about that, as I can only help "
+    "with questions about chronic kidney disease (CKD).\n\n"
+    "If your question is about another health concern, the NHS website "
+    "(nhs.uk) or your GP practice are the best places to start — and if you "
+    "need urgent advice, you can always call NHS 111.\n\n"
+    "I'm happy to help with anything about CKD: symptoms, diagnosis, "
+    "treatment, prevention, or day-to-day life with the condition."
 )
 
 # ── Query rewriting ────────────────────────────────────────────
