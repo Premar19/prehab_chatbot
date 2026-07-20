@@ -57,19 +57,78 @@ from server_langchain import (
 )
 
 # ── Red-flag triage ────────────────────────────────────────────
-# Deliberately deterministic (keyword-based, no LLM): a safety gate should be
+# Deliberately deterministic (pattern-based, no LLM): a safety gate should be
 # predictable and auditable, and must work even when the model is down.
-RED_FLAGS = [
-    "chest pain", "chest tightness", "heart attack",
-    "can't breathe", "cannot breathe", "cant breathe", "struggling to breathe",
-    "short of breath", "shortness of breath",
-    "collapsed", "collapse", "passed out", "unconscious", "fainted",
-    "seizure", "fitting",
-    "not urinated", "haven't urinated", "no urine", "stopped urinating",
-    "coughing up blood", "vomiting blood",
-    "suicidal", "kill myself", "end my life", "self harm", "self-harm",
-    "overdose",
+#
+# Patterns, not exact phrases: "chest pain", "pain in my chest", and "my chest
+# really hurts" must all match, as must "can't breathe" / "unable to breathe" /
+# "hard to breathe". Each entry pairs the symptom word with its qualifiers in
+# either order, within a short window.
+import re as _re
+
+_W = r"[^.!?]{0,40}?"  # words in between, but never across sentence boundaries
+
+RED_FLAG_PATTERNS = [
+    # chest pain / tightness / pressure, either word order
+    rf"\bchest\b{_W}\b(pain|hurt\w*|ach\w*|tight\w*|pressure|crush\w*)",
+    rf"\b(pain\w*|hurt\w*|ach\w*|tight\w*|pressure|crush\w*)\b{_W}\bchest\b",
+    r"\bheart attack\b",
+    # breathing difficulty: negation/struggle word + any breath variant
+    rf"\b(can'?t|can ?not|cannot|unable|struggl\w*|difficult\w*|hard|short(ness)?)\b{_W}\bbreath\w*",
+    rf"\bbreath\w*{_W}\b(difficult\w*|problem\w*|trouble|struggl\w*)",
+    # collapse / consciousness
+    r"\b(collaps\w*|passed out|pass out|unconscious|faint\w*|seizure|fitting)\b",
+    # anuria (no urine output)
+    rf"\b(no|not|stop\w*|haven'?t|unable)\b{_W}\burin\w*",
+    # blood where it shouldn't be
+    rf"\b(cough\w*|vomit\w*|throw\w* up|spit\w*)\b{_W}\bblood\b",
+    # self-harm / crisis
+    r"\b(suicid\w*|kill myself|end my life|self.?harm|overdose|want to die|don'?t want to live)\b",
 ]
+
+_RED_FLAG_RE = [_re.compile(p, _re.IGNORECASE) for p in RED_FLAG_PATTERNS]
+
+
+def is_red_flag(text: str) -> bool:
+    return any(rx.search(text) for rx in _RED_FLAG_RE)
+
+
+# ── Layer 2: LLM safety classifier ─────────────────────────────
+# Catches phrasings the rules can't enumerate ("an elephant is sitting on my
+# chest"). Runs only when the rules did NOT flag, so the deterministic layer
+# stays the fast path and keeps working if the model is down.
+TRIAGE_CLASSIFIER_PROMPT = ChatPromptTemplate.from_template(
+    """You are a safety classifier for an NHS kidney-disease chatbot.
+
+Decide whether the patient's message describes a possible medical emergency or
+crisis they may be experiencing RIGHT NOW — for example chest pain, trouble
+breathing, signs of stroke or heart attack, collapse, severe bleeding,
+inability to urinate, or thoughts of self-harm.
+
+General or educational questions ABOUT symptoms (e.g. "does CKD cause chest
+pain?") are NOT emergencies. If it is genuinely unclear whether the patient is
+describing their own current emergency, treat it as an emergency.
+
+Answer with exactly one word: EMERGENCY or OK.
+
+Patient message:
+{question}
+
+Answer:"""
+)
+
+
+def llm_flags_emergency(text: str) -> bool:
+    """LLM opinion on messages the rules didn't flag. Fails open to the normal
+    flow: the rules layer already ran, and the generation prompt's grounding
+    guardrail remains behind everything."""
+    try:
+        chain = TRIAGE_CLASSIFIER_PROMPT | _STATE["llm"] | StrOutputParser()
+        verdict = chain.invoke({"question": text}).strip().upper()
+        return verdict.startswith("EMERGENCY")
+    except Exception:
+        return False
+
 
 URGENT_ANSWER = (
     "Your message mentions symptoms that may need urgent medical attention. "
@@ -79,7 +138,9 @@ URGENT_ANSWER = (
     "loss of consciousness), call 999 or go to A&E now.\n"
     "- If you need urgent advice but it is not life-threatening, call NHS 111.\n"
     "- If you are struggling with thoughts of harming yourself, call 999, or "
-    "the Samaritans on 116 123 — they are available 24/7."
+    "the Samaritans on 116 123 — they are available 24/7.\n\n"
+    "If you were asking a general question rather than describing how you feel "
+    "right now, please rephrase it and I'll do my best to help."
 )
 
 GREETING_ANSWER = (
@@ -129,20 +190,26 @@ class ChatState(TypedDict, total=False):
     docs: List[Document]
     answer: str
     route: str                 # set by triage: urgent|greeting|filler|normal
+    triage_method: str         # rules | llm_classifier | none
 
 
 # ── Nodes ──────────────────────────────────────────────────────
 def triage(state: ChatState) -> ChatState:
-    """Classify the message before anything else touches it."""
-    q = state["question"].lower()
-    if any(flag in q for flag in RED_FLAGS):
-        return {"route": "urgent"}
+    """Layered safety gate, cheapest check first:
+    1. deterministic red-flag rules (no LLM, works offline, auditable)
+    2. exact-match greeting/filler shortcuts (no LLM)
+    3. LLM safety classifier for phrasings the rules can't enumerate
+    """
+    if is_red_flag(state["question"]):
+        return {"route": "urgent", "triage_method": "rules"}
     normalized = normalize_text(state["question"])
     if normalized in GREETINGS:
-        return {"route": "greeting"}
+        return {"route": "greeting", "triage_method": "none"}
     if normalized in FILLERS and state.get("has_history"):
-        return {"route": "filler"}
-    return {"route": "normal"}
+        return {"route": "filler", "triage_method": "none"}
+    if llm_flags_emergency(state["question"]):
+        return {"route": "urgent", "triage_method": "llm_classifier"}
+    return {"route": "normal", "triage_method": "none"}
 
 
 def urgent(state: ChatState) -> ChatState:
@@ -267,6 +334,7 @@ class ChatResponse(BaseModel):
     retrieved_chunks: List[dict]
     route: Optional[str] = None      # which graph path answered (debug/demo)
     search_query: Optional[str] = None  # the rewritten retrieval query
+    triage_method: Optional[str] = None  # rules | llm_classifier | none
 
 
 # ── API endpoints ──────────────────────────────────────────────
@@ -306,6 +374,7 @@ def chat(req: ChatRequest):
         retrieved_chunks=retrieved_info,
         route=result.get("route"),
         search_query=result.get("search_query"),
+        triage_method=result.get("triage_method"),
     )
 
 
