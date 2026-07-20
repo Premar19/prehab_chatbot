@@ -102,10 +102,12 @@ OUT_OF_SCOPE_ANSWER = (
 
 # ── Query rewriting ────────────────────────────────────────────
 REWRITE_PROMPT = ChatPromptTemplate.from_template(
-    """Rewrite the patient's latest message as one standalone question about
-chronic kidney disease, using the conversation for context. The rewritten
-question will be used for a document search, so include the specific topic
-being discussed. If the message is already self-contained, return it unchanged.
+    """Rewrite the patient's latest message as one standalone question, using the
+conversation only to resolve what words like "it", "that", or "this" refer to.
+Preserve the patient's intended topic exactly — never change the subject of
+their question, even if it is not about kidney disease. (Scope filtering
+happens later; your job is only to make the question self-contained.)
+If the message is already self-contained, return it unchanged.
 Return ONLY the rewritten question, nothing else.
 
 Conversation:
