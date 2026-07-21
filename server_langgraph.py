@@ -119,8 +119,11 @@ breathing, signs of stroke or heart attack, collapse, severe bleeding,
 inability to urinate, or thoughts of self-harm.
 
 General or educational questions ABOUT symptoms (e.g. "does CKD cause chest
-pain?") are NOT emergencies. If it is genuinely unclear whether the patient is
-describing their own current emergency, treat it as an emergency.
+pain?") are NOT emergencies. Messages with no health content at all — random
+text, URLs, numbers, test messages, greetings — are NOT emergencies either.
+Only when a message mentions symptoms or distress and it is unclear whether
+the patient is describing their own current emergency, err on the side of
+treating it as an emergency.
 
 Answer with exactly one word: EMERGENCY or OK.
 
