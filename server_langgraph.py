@@ -16,15 +16,24 @@ The graph:
                   ▼
                retrieve   ──nothing relevant──► out-of-scope reply ─► END
                   ▼
-               generate   (grounded answer + NHS citations) ───────► END
+               generate ◄──────┐   (grounded answer + NHS citations)
+                  │ tool call? │
+                  ▼            │
+                tools ─────────┘   (deterministic eGFR → CKD-stage lookup)
+                  │ final answer
+                  ▼
+                 END
 
-New over the previous servers:
-  * triage node    — deterministic red-flag symptom gate. Emergencies get an
-    urgent-care response instead of an educational RAG answer, and never reach
-    the LLM at all.
-  * rewrite node   — an LLM call rewrites follow-ups ("is it hereditary?")
-    into standalone retrieval queries ("is chronic kidney disease
-    hereditary?"), replacing the old concatenate-and-repeat heuristic.
+Key design points:
+  * triage   — hybrid safety gate: deterministic red-flag rules first, then a
+    Pydantic-structured LLM classifier for phrasings rules can't enumerate.
+    Emergencies never reach the RAG pipeline.
+  * rewrite  — an LLM call rewrites follow-ups ("is it hereditary?") into
+    standalone retrieval queries, preserving the patient's topic.
+  * tools    — the generate node can call ckd_stage_from_egfr, a deterministic
+    NHS staging lookup, instead of doing threshold arithmetic itself. Exact
+    medical thresholds belong in code, not in an LLM's head. The
+    generate ↔ tools cycle is the standard LangGraph agent loop.
 
 Run: python server_langgraph.py         (or uvicorn server_langgraph:app)
 GET /graph returns the flow as Mermaid text for documentation/demos.
@@ -40,8 +49,11 @@ from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 
 from langchain_core.documents import Document
+from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.tools import tool
+from pydantic import Field
 from langgraph.graph import StateGraph, START, END
 
 # Shared components — one implementation for both servers.
@@ -50,6 +62,7 @@ from server_langchain import (
     FILLERS,
     GREETINGS,
     MODE,
+    PROMPT,
     format_docs,
     format_history,
     load_components,
@@ -118,10 +131,29 @@ Answer:"""
 )
 
 
+class TriageVerdict(BaseModel):
+    """Safety classification of a patient message."""
+
+    emergency: bool = Field(
+        description="True if the message may describe a medical emergency or "
+                    "self-harm crisis the patient is currently experiencing."
+    )
+
+
 def llm_flags_emergency(text: str) -> bool:
     """LLM opinion on messages the rules didn't flag. Fails open to the normal
     flow: the rules layer already ran, and the generation prompt's grounding
-    guardrail remains behind everything."""
+    guardrail remains behind everything.
+
+    Primary path parses the model's answer into a Pydantic schema
+    (with_structured_output), so the verdict is a typed boolean rather than a
+    string match; if the provider rejects structured output, falls back to the
+    plain-text chain."""
+    try:
+        classifier = TRIAGE_CLASSIFIER_PROMPT | _STATE["llm"].with_structured_output(TriageVerdict)
+        return classifier.invoke({"question": text}).emergency
+    except Exception:
+        pass
     try:
         chain = TRIAGE_CLASSIFIER_PROMPT | _STATE["llm"] | StrOutputParser()
         verdict = chain.invoke({"question": text}).strip().upper()
@@ -184,6 +216,46 @@ Standalone question:"""
 )
 
 
+# ── Tools ──────────────────────────────────────────────────────
+@tool
+def ckd_stage_from_egfr(egfr: float) -> str:
+    """Determine the exact NHS CKD G-stage for a numeric eGFR value
+    (mL/min/1.73m²). Use this whenever the patient provides an actual eGFR
+    number, instead of estimating the stage yourself."""
+    if not 0 < egfr <= 250:
+        return (f"An eGFR of {egfr} is outside the plausible range — the value "
+                "may be mistyped. Ask the patient to double-check their result.")
+    if egfr >= 90:
+        stage, desc = "G1", ("normal kidney function — this only counts as CKD "
+                             "if there are other signs of kidney damage")
+    elif egfr >= 60:
+        stage, desc = "G2", ("mildly reduced kidney function — this only counts "
+                             "as CKD if there are other signs of kidney damage")
+    elif egfr >= 45:
+        stage, desc = "G3a", "mildly to moderately reduced kidney function"
+    elif egfr >= 30:
+        stage, desc = "G3b", "moderately to severely reduced kidney function"
+    elif egfr >= 15:
+        stage, desc = "G4", "severely reduced kidney function"
+    else:
+        stage, desc = "G5", "kidney failure (sometimes called end-stage kidney disease)"
+    return (f"An eGFR of {egfr} corresponds to stage {stage}: {desc}. "
+            "Note that full CKD staging also uses the urine ACR result, and "
+            "staging should always be confirmed by the patient's own care team.")
+
+
+TOOLS = [ckd_stage_from_egfr]
+TOOLS_BY_NAME = {t.name: t for t in TOOLS}
+MAX_TOOL_ROUNDS = 2
+
+TOOL_GUIDANCE = SystemMessage(content=(
+    "You have a tool called ckd_stage_from_egfr that determines the exact NHS "
+    "CKD stage for a numeric eGFR value. If the patient's question contains a "
+    "specific eGFR number, call the tool rather than working out the stage "
+    "yourself. Do not call it when no eGFR number was given."
+))
+
+
 # ── Graph state ────────────────────────────────────────────────
 class ChatState(TypedDict, total=False):
     question: str
@@ -194,6 +266,9 @@ class ChatState(TypedDict, total=False):
     answer: str
     route: str                 # set by triage: urgent|greeting|filler|normal
     triage_method: str         # rules | llm_classifier | none
+    messages: list             # generate <-> tools conversation
+    tool_rounds: int
+    tools_used: List[str]
 
 
 # ── Nodes ──────────────────────────────────────────────────────
@@ -256,12 +331,61 @@ def out_of_scope(state: ChatState) -> ChatState:
 
 
 def generate(state: ChatState) -> ChatState:
-    answer = _STATE["chain"].invoke({
-        "context": format_docs(state["docs"]),
-        "history": state["history_text"],
-        "question": state["question"],
-    })
-    return {"answer": answer}
+    """Grounded answer generation, with tool access.
+
+    First visit builds the RAG prompt as a message list; revisits (after the
+    tools node) continue the same conversation with tool results appended.
+    Once MAX_TOOL_ROUNDS is reached, the model is invoked without tools so it
+    must produce a final answer."""
+    msgs = list(state.get("messages") or [])
+    if not msgs:
+        msgs = [TOOL_GUIDANCE] + PROMPT.format_messages(
+            context=format_docs(state["docs"]),
+            history=state["history_text"],
+            question=state["question"],
+        )
+
+    if state.get("tool_rounds", 0) >= MAX_TOOL_ROUNDS:
+        llm = _STATE["llm"]                # tools off — force a final answer
+    else:
+        llm = _STATE["llm"].bind_tools(TOOLS)
+
+    ai = llm.invoke(msgs)
+    msgs = msgs + [ai]
+
+    if getattr(ai, "tool_calls", None):
+        return {"messages": msgs}          # routed to the tools node
+    return {"messages": msgs, "answer": ai.content}
+
+
+def run_tools(state: ChatState) -> ChatState:
+    """Execute the tool calls the model requested and hand the results back."""
+    msgs = list(state["messages"])
+    used = list(state.get("tools_used") or [])
+    for call in msgs[-1].tool_calls:
+        fn = TOOLS_BY_NAME.get(call["name"])
+        if fn is None:
+            result = f"Unknown tool: {call['name']}"
+        else:
+            try:
+                result = fn.invoke(call["args"])
+            except Exception as exc:
+                result = f"Tool error: {exc}"
+        used.append(call["name"])
+        msgs.append(ToolMessage(content=str(result), tool_call_id=call["id"]))
+    # Re-anchor on the original question. Smaller models (llama3.1:8b locally)
+    # otherwise drift after the tool round and answer an invented question.
+    msgs.append(HumanMessage(content=(
+        "Using the tool result above together with the NHS context, now answer "
+        f"the patient's original question: {state['question']}\n"
+        "Follow the same RULES as before. Do not call any more tools unless "
+        "the patient gave another eGFR value you have not looked up yet."
+    )))
+    return {
+        "messages": msgs,
+        "tools_used": used,
+        "tool_rounds": state.get("tool_rounds", 0) + 1,
+    }
 
 
 # ── Graph wiring ───────────────────────────────────────────────
@@ -275,6 +399,7 @@ def build_graph():
     g.add_node("retrieve", retrieve)
     g.add_node("out_of_scope", out_of_scope)
     g.add_node("generate", generate)
+    g.add_node("tools", run_tools)
 
     g.add_edge(START, "triage")
     g.add_conditional_edges(
@@ -293,7 +418,16 @@ def build_graph():
         lambda s: "generate" if s["docs"] else "out_of_scope",
         {"generate": "generate", "out_of_scope": "out_of_scope"},
     )
-    for terminal in ("urgent", "greeting", "filler", "out_of_scope", "generate"):
+    # The agent loop: generate may request a tool; results feed back into
+    # generate until it produces a final answer (bounded by MAX_TOOL_ROUNDS).
+    g.add_conditional_edges(
+        "generate",
+        lambda s: "tools" if not s.get("answer") else "done",
+        {"tools": "tools", "done": END},
+    )
+    g.add_edge("tools", "generate")
+
+    for terminal in ("urgent", "greeting", "filler", "out_of_scope"):
         g.add_edge(terminal, END)
 
     return g.compile()
@@ -338,6 +472,7 @@ class ChatResponse(BaseModel):
     route: Optional[str] = None      # which graph path answered (debug/demo)
     search_query: Optional[str] = None  # the rewritten retrieval query
     triage_method: Optional[str] = None  # rules | llm_classifier | none
+    tools_used: Optional[List[str]] = None  # tools invoked during generation
 
 
 # ── API endpoints ──────────────────────────────────────────────
@@ -378,6 +513,7 @@ def chat(req: ChatRequest):
         route=result.get("route"),
         search_query=result.get("search_query"),
         triage_method=result.get("triage_method"),
+        tools_used=result.get("tools_used"),
     )
 
 
