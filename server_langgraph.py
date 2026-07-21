@@ -41,7 +41,7 @@ GET /graph returns the flow as Mermaid text for documentation/demos.
 
 import os
 from contextlib import asynccontextmanager
-from typing import List, Optional, TypedDict
+from typing import List, Literal, Optional, TypedDict
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -112,20 +112,26 @@ def is_red_flag(text: str) -> bool:
 # stays the fast path and keeps working if the model is down.
 TRIAGE_CLASSIFIER_PROMPT = ChatPromptTemplate.from_template(
     """You are a safety classifier for an NHS kidney-disease chatbot.
+Classify the patient's message into exactly one category:
 
-Decide whether the patient's message describes a possible medical emergency or
-crisis they may be experiencing RIGHT NOW — for example chest pain, trouble
-breathing, signs of stroke or heart attack, collapse, severe bleeding,
-inability to urinate, or thoughts of self-harm.
+EMERGENCY — the patient may be experiencing a medical emergency or self-harm
+crisis RIGHT NOW: chest pain, trouble breathing, signs of stroke or heart
+attack, collapse, severe bleeding, inability to urinate, or thoughts of
+harming themselves.
 
-General or educational questions ABOUT symptoms (e.g. "does CKD cause chest
-pain?") are NOT emergencies. Messages with no health content at all — random
-text, URLs, numbers, test messages, greetings — are NOT emergencies either.
-Only when a message mentions symptoms or distress and it is unclear whether
-the patient is describing their own current emergency, err on the side of
-treating it as an emergency.
+DISTRESS — the patient sounds frightened, anxious, overwhelmed, or upset
+about their illness (e.g. scared of dying, just diagnosed, doesn't know what
+to do) but describes no physical emergency and no intent to harm themselves.
 
-Answer with exactly one word: EMERGENCY or OK.
+OK — everything else: ordinary questions, educational questions ABOUT
+symptoms (e.g. "does CKD cause chest pain?"), and messages with no health
+content at all (random text, URLs, numbers, test messages).
+
+Fear of dying from an illness is DISTRESS, not EMERGENCY. Only when a message
+mentions current symptoms and it is unclear whether the patient is describing
+their own emergency, err on the side of EMERGENCY.
+
+Answer with exactly one word: EMERGENCY, DISTRESS, or OK.
 
 Patient message:
 {question}
@@ -137,32 +143,38 @@ Answer:"""
 class TriageVerdict(BaseModel):
     """Safety classification of a patient message."""
 
-    emergency: bool = Field(
-        description="True if the message may describe a medical emergency or "
-                    "self-harm crisis the patient is currently experiencing."
+    category: Literal["emergency", "distress", "ok"] = Field(
+        description="'emergency' if the patient may be experiencing a medical "
+                    "emergency or self-harm crisis right now; 'distress' if "
+                    "they sound frightened or overwhelmed about their illness "
+                    "but describe no emergency; 'ok' otherwise."
     )
 
 
-def llm_flags_emergency(text: str) -> bool:
-    """LLM opinion on messages the rules didn't flag. Fails open to the normal
-    flow: the rules layer already ran, and the generation prompt's grounding
-    guardrail remains behind everything.
+def classify_message(text: str) -> str:
+    """LLM verdict ('emergency' | 'distress' | 'ok') on messages the rules
+    didn't flag. Fails open to 'ok': the rules layer already ran, and the
+    generation prompt's grounding guardrail remains behind everything.
 
     Primary path parses the model's answer into a Pydantic schema
-    (with_structured_output), so the verdict is a typed boolean rather than a
+    (with_structured_output), so the verdict is a typed literal rather than a
     string match; if the provider rejects structured output, falls back to the
     plain-text chain."""
     try:
         classifier = TRIAGE_CLASSIFIER_PROMPT | _STATE["llm"].with_structured_output(TriageVerdict)
-        return classifier.invoke({"question": text}).emergency
+        return classifier.invoke({"question": text}).category
     except Exception:
         pass
     try:
         chain = TRIAGE_CLASSIFIER_PROMPT | _STATE["llm"] | StrOutputParser()
         verdict = chain.invoke({"question": text}).strip().upper()
-        return verdict.startswith("EMERGENCY")
+        if verdict.startswith("EMERGENCY"):
+            return "emergency"
+        if verdict.startswith("DISTRESS"):
+            return "distress"
+        return "ok"
     except Exception:
-        return False
+        return "ok"
 
 
 URGENT_ANSWER = (
@@ -258,6 +270,17 @@ TOOL_GUIDANCE = SystemMessage(content=(
     "yourself. Do not call it when no eGFR number was given."
 ))
 
+DISTRESS_GUIDANCE = SystemMessage(content=(
+    "The patient sounds frightened or overwhelmed. Begin your answer by "
+    "briefly and warmly acknowledging how they are feeling, then answer their "
+    "question honestly but gently — no false reassurance, but emphasise what "
+    "can be done (treatments, healthy living, support from their care team). "
+    "All the usual RULES still apply. End by encouraging them to talk to "
+    "their GP or kidney care team about their worries, and mention that if "
+    "they feel overwhelmed they can call NHS 111, or the Samaritans on "
+    "116 123 if they need someone to talk to."
+))
+
 
 # ── Graph state ────────────────────────────────────────────────
 class ChatState(TypedDict, total=False):
@@ -269,6 +292,7 @@ class ChatState(TypedDict, total=False):
     answer: str
     route: str                 # set by triage: urgent|greeting|filler|normal
     triage_method: str         # rules | llm_classifier | none
+    distressed: bool           # patient upset but not in danger — soften tone
     messages: list             # generate <-> tools conversation
     tool_rounds: int
     tools_used: List[str]
@@ -288,8 +312,14 @@ def triage(state: ChatState) -> ChatState:
         return {"route": "greeting", "triage_method": "none"}
     if normalized in FILLERS and state.get("has_history"):
         return {"route": "filler", "triage_method": "none"}
-    if llm_flags_emergency(state["question"]):
+    verdict = classify_message(state["question"])
+    if verdict == "emergency":
         return {"route": "urgent", "triage_method": "llm_classifier"}
+    if verdict == "distress":
+        # Not an emergency: answer their question, but with acknowledgement
+        # and support signposting woven in (see DISTRESS_GUIDANCE).
+        return {"route": "normal", "triage_method": "llm_classifier",
+                "distressed": True}
     return {"route": "normal", "triage_method": "none"}
 
 
@@ -329,7 +359,20 @@ def retrieve(state: ChatState) -> ChatState:
     return {"docs": docs}
 
 
+DISTRESSED_OUT_OF_SCOPE_ANSWER = (
+    "I can hear this is a worrying time, and I'm sorry you're going through "
+    "it. I couldn't find NHS kidney-disease information matching your message, "
+    "but I'm here for any questions about CKD — what it means, treatment, or "
+    "living with it day to day.\n\n"
+    "It can also really help to talk your worries through with your GP or "
+    "kidney care team. And if you're feeling overwhelmed, you can call NHS 111 "
+    "any time, or the Samaritans on 116 123 if you'd like someone to talk to."
+)
+
+
 def out_of_scope(state: ChatState) -> ChatState:
+    if state.get("distressed"):
+        return {"answer": DISTRESSED_OUT_OF_SCOPE_ANSWER, "route": "out_of_scope"}
     return {"answer": OUT_OF_SCOPE_ANSWER, "route": "out_of_scope"}
 
 
@@ -342,7 +385,10 @@ def generate(state: ChatState) -> ChatState:
     must produce a final answer."""
     msgs = list(state.get("messages") or [])
     if not msgs:
-        msgs = [TOOL_GUIDANCE] + PROMPT.format_messages(
+        msgs = [TOOL_GUIDANCE]
+        if state.get("distressed"):
+            msgs.append(DISTRESS_GUIDANCE)
+        msgs += PROMPT.format_messages(
             context=format_docs(state["docs"]),
             history=state["history_text"],
             question=state["question"],
@@ -476,6 +522,7 @@ class ChatResponse(BaseModel):
     search_query: Optional[str] = None  # the rewritten retrieval query
     triage_method: Optional[str] = None  # rules | llm_classifier | none
     tools_used: Optional[List[str]] = None  # tools invoked during generation
+    distressed: Optional[bool] = None    # empathy-aware generation was used
 
 
 # ── API endpoints ──────────────────────────────────────────────
@@ -517,6 +564,7 @@ def chat(req: ChatRequest):
         search_query=result.get("search_query"),
         triage_method=result.get("triage_method"),
         tools_used=result.get("tools_used"),
+        distressed=result.get("distressed"),
     )
 
 
